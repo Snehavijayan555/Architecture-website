@@ -27,7 +27,10 @@
 
     <!-- Libraries Stylesheet -->
     <link href="./lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="./lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="./lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
     <link
       href="./lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
       rel="stylesheet"
@@ -108,11 +111,18 @@
         <h1 class="text-primary m-0" style="font-size: 20px">
           <img
             class="me-3"
-            src="./img/icons/icon-1.png"
+            src="./img/logo.png"
             alt="Icon"
             height="50px"
             width="50px"
-          />MARS INTERIORS
+          />
+          <img
+          class="me-3"
+          src="./img/logo-text.png"
+          alt="Icon"
+          height="50px"
+          width="100px"
+        />
         </h1>
       </a>
       <button
@@ -128,23 +138,29 @@
           <a href="./index.html" class="nav-item nav-link active">Home</a>
           <a href="./about.html" class="nav-item nav-link">About</a>
           <div class="nav-item dropdown">
-            <a
-              href="./service.html"
-              class="nav-link dropdown-toggle"
-              data-bs-toggle="dropdown"
-              >Services</a
-            >
+            <a href="./service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              Services
+            </a>
             <div class="dropdown-menu border-0 m-0">
-              <a href="./kitchens.html" class="dropdown-item">Kitchens</a>
-              <a href="./closets.html" class="dropdown-item">Closets</a>
-              <a href="./entertainment.html" class="dropdown-item"
-                >Entertainment Area</a
-              >
-              <a href="./wallcladding.html" class="dropdown-item"
-                >Wall Cladding</a
-              >
+              <a href="./kitchens.html" class="dropdown-item">
+                <img src="./img/icons/kitchenicon.svg" alt="Kitchen Icon" class="me-2" width="20" />
+                Kitchens
+              </a>
+              <a href="./closets.html" class="dropdown-item">
+                <img src="./img/icons/closeticon.svg" alt="Closet Icon" class="me-2" width="20" />
+                Closets
+              </a>
+              <a href="./entertainment.html" class="dropdown-item">
+                <img src="./img/icons/swimmingicon.svg" alt="Entertainment Icon" class="me-2" width="20" />
+                Entertainment Area
+              </a>
+              <a href="./wallcladding.html" class="dropdown-item">
+                <img src="./img/icons/wallcladdingicon.svg" alt="Wall Cladding Icon" class="me-2" width="20" />
+                Wall Cladding
+              </a>
             </div>
           </div>
+          
           <div class="nav-item dropdown">
             <a
               href="./Maintenance.html"
@@ -153,15 +169,20 @@
               >Maintenance</a
             >
             <div class="dropdown-menu border-0 m-0">
-              <a href="./Maintenance.html" class="dropdown-item">AMC Contracts</a>
-              <a href="./Maintenance.html" class="dropdown-item"
-                >Interior Renovations</a
+              <a href="./Maintenance.html" class="dropdown-item">
+                <img src="./img/icons/amccontracticon.svg" alt="AmcIcon" class="me-2" width="20" />
+                AMC Contracts</a
               >
               <a href="./Maintenance.html" class="dropdown-item"
-                >Turnkey Renovations</a
+                ><img src="./img/icons/interioricon.svg" alt="Interior Icon" class="me-2" width="20" />
+                Interior Renovations</a
               >
               <a href="./Maintenance.html" class="dropdown-item"
-                >Home Improvements</a
+                ><img src="./img/icons/turnkeyicon.svg" alt="turnkey Icon" class="me-2" width="20" />
+                Turnkey Renovations</a
+              >
+              <a href="./Maintenance.html" class="dropdown-item"
+                ><img src="./img/icons/homeimprovements.svg" alt="homeimprovements" class="me-2" width="20" /> Home Improvements</a
               >
             </div>
           </div>
@@ -174,14 +195,16 @@
             >
             <div class="dropdown-menu border-0 m-0">
               <a href="./InteriorDesign.html" class="dropdown-item"
-                >Concept Design Planning</a
+                ><img src="./img/icons/conceptdesignicon.svg" alt="conceptDesign" class="me-2" width="20" />Concept Design Planning</a
               >
               <a href="./InteriorDesign.html" class="dropdown-item"
-                >Full Interior Design</a
+                ><img src="./img/icons/fullinterioricon.svg" alt="fullInterior icon" class="me-2" width="20" />Full Interior Design</a
               >
-              <a href="./InteriorDesign.html" class="dropdown-item">3D Designs</a>
               <a href="./InteriorDesign.html" class="dropdown-item"
-                >Interior Furniture</a
+                ><img src="./img/icons/3dicon.svg" alt="3d icon" class="me-2" width="20" />3D Designs</a
+              >
+              <a href="./InteriorDesign.html" class="dropdown-item"
+                ><img src="./img/icons/interiorfurnitoricon.svg" alt="interiorfurnitoricon" class="me-2" width="20" />Interior Furniture</a
               >
             </div>
           </div>
@@ -378,7 +401,9 @@
                 <h3 class="mb-0">Experience</h3>
               </div>
             </div>
-            <a class="btn btn-primary py-3 px-5" href="./about.html">Read More</a>
+            <a class="btn btn-primary py-3 px-5" href="./about.html"
+              >Read More</a
+            >
           </div>
         </div>
       </div>
@@ -916,81 +941,79 @@
             </div>
           </div>
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-            
-              <div class="row g-3">
-                <div class="col-12 col-sm-6">
+            <div class="row g-3">
+              <div class="col-12 col-sm-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your Name"
+                  style="height: 55px"
+                />
+              </div>
+              <div class="col-12 col-sm-6">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Your Email"
+                  style="height: 55px"
+                />
+              </div>
+              <div class="col-12 col-sm-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your Mobile"
+                  style="height: 55px"
+                />
+              </div>
+              <div class="col-12 col-sm-6">
+                <select class="form-select" style="height: 55px">
+                  <option selected>Choose Service</option>
+                  <option value="1">kitchens</option>
+                  <option value="2">Closets</option>
+                  <option value="3">Entertainment Area</option>
+                  <option value="4">Wall Cladding</option>
+                  <option value="5">Maintenance</option>
+                  <option value="6">Interior Design</option>
+                </select>
+              </div>
+              <div class="col-12 col-sm-6" style="position: relative">
+                <div class="date" id="date" data-target-input="nearest">
                   <input
                     type="text"
-                    class="form-control"
-                    placeholder="Your Name"
+                    class="form-control datetimepicker-input"
+                    placeholder="Choose Date"
+                    data-target="#date"
+                    data-toggle="datetimepicker"
                     style="height: 55px"
                   />
-                </div>
-                <div class="col-12 col-sm-6">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Your Email"
-                    style="height: 55px"
-                  />
-                </div>
-                <div class="col-12 col-sm-6">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Your Mobile"
-                    style="height: 55px"
-                  />
-                </div>
-                <div class="col-12 col-sm-6">
-                  <select class="form-select" style="height: 55px">
-                    <option selected>Choose Service</option>
-                    <option value="1">kitchens</option>
-                    <option value="2">Closets</option>
-                    <option value="3">Entertainment Area</option>
-                    <option value="4">Wall Cladding</option>
-                    <option value="5">Maintenance</option>
-                    <option value="6">Interior Design</option>
-                  </select>
-                </div>
-                <div class="col-12 col-sm-6" style="position: relative">
-                  <div class="date" id="date" data-target-input="nearest">
-                    <input
-                      type="text"
-                      class="form-control datetimepicker-input"
-                      placeholder="Choose Date"
-                      data-target="#date"
-                      data-toggle="datetimepicker"
-                      style="height: 55px"
-                    />
-                  </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                  <div class="time" id="time" data-target-input="nearest">
-                    <input
-                      type="text"
-                      class="form-control datetimepicker-input"
-                      placeholder="Choose Date"
-                      data-target="#time"
-                      data-toggle="datetimepicker"
-                      style="height: 55px"
-                    />
-                  </div>
-                </div>
-                <div class="col-12">
-                  <textarea
-                    class="form-control"
-                    rows="5"
-                    placeholder="Message"
-                  ></textarea>
-                </div>
-                <div class="col-12">
-                  <button class="btn btn-primary w-100 py-3" type="submit">
-                    Book Appointment
-                  </button>
                 </div>
               </div>
-            
+              <div class="col-12 col-sm-6">
+                <div class="time" id="time" data-target-input="nearest">
+                  <input
+                    type="text"
+                    class="form-control datetimepicker-input"
+                    placeholder="Choose Date"
+                    data-target="#time"
+                    data-toggle="datetimepicker"
+                    style="height: 55px"
+                  />
+                </div>
+              </div>
+              <div class="col-12">
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary w-100 py-3" type="submit">
+                  Book Appointment
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1110,8 +1133,27 @@
             <a class="btn btn-link" href="./service.html">Our Services</a>
             <a class="btn btn-link" href="./contact.html">Support</a>
           </div>
+          <div class="col-lg-3 col-md-6">
+            <a href="./index.html" class="ms-4 ms-lg-0">
+              <div>
+                <img
+                  class="me-3"
+                  src="./img/icons/icon-1.png"
+                  alt="Icon"
+                  height="150px"
+                  width="250px"
+                />
+              </div>
+              <div>
+                <h1 class="text-primary m-0" style="font-size: 30px">
+                  MARS INTERIORS
+                </h1>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
+
       <div class="container-fluid copyright">
         <div class="container">
           <div class="row">

@@ -52,7 +52,7 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
+    <!-- <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-3">
@@ -73,7 +73,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Topbar End -->
 
 
@@ -185,9 +185,72 @@
           </div>
           <a href="./contact.html" class="nav-item nav-link">Contact</a>
         </div>
-        <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block"
-          >Get Estimate</a
-        >
+       
+
+
+<!-- Bootstrap Modal Trigger-->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" >
+  Get Estimate
+ </button>
+ 
+ <!-- Modal Structure -->
+ <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="contactModalLabel">Get Estimate</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+         <form>
+           <!-- Name Input -->
+           <div class="mb-3">
+             <label for="nameInput" class="form-label">Name</label>
+             <input type="text" class="form-control" id="nameInput" placeholder="Enter your name" required>
+           </div>
+ 
+           <!-- Phone Number Input -->
+           <div class="mb-3">
+             <label for="phoneInput" class="form-label">Phone Number</label>
+             <input type="tel" class="form-control" id="phoneInput" placeholder="Enter your phone number" required>
+           </div>
+ 
+           <!-- Services Dropdown -->
+           <div class="mb-3">
+             <label for="servicesDropdown" class="form-label">Select Service</label>
+             <select class="form-select" id="servicesDropdown" required>
+               <option value="" disabled selected>Select a service</option>
+               <option value="service1">Kitchen</option>
+                <option value="service2">Closets</option>
+                <option value="service3">Entertainment Area</option>
+                <option value="service3">Wall Cladding</option>
+                <option value="service3">Maintenance</option>
+                <option value="service3">Interior Design</option>
+                <option value="service3">Other</option>
+                </select>
+           </div>
+ 
+           <!-- Message Input -->
+           <div class="mb-3">
+             <label for="messageTextarea" class="form-label">Message Details</label>
+             <textarea class="form-control" id="messageTextarea" rows="3" placeholder="Enter your message"></textarea>
+           </div>
+ 
+           <!-- File Upload -->
+           <div class="mb-3">
+             <label for="fileUpload" class="form-label">Upload File</label>
+             <input class="form-control" type="file" id="fileUpload">
+           </div>
+         </form>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         <button type="submit" class="btn btn-primary">Submit</button>
+       </div>
+     </div>
+   </div>
+ </div>
+ 
       </div>
     </nav>
     <!-- Navbar End -->
@@ -369,54 +432,53 @@
     <!-- Team End -->
         
 
+
+    <div class="social-media-sticky">
+      <div class="d-flex justify-content-around social-media-icons"  >
+        <div class="icon-block">
+          <a class="btn btn-square btn-outline-body" href="#">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="icon-block" >
+          <a class="btn btn-square btn-outline-body"  href="#">
+            <i class="fa fa-phone-alt"></i>
+          </a>
+        </div>
+        <div class="icon-block">
+          <a class="btn btn-square btn-outline-body"  href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="icon-block">
+          <a class="btn btn-square btn-outline-body"  href="#">
+            <i class="fa fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+
     <!-- Footer Start -->
-    <div
-      class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-lg-3 col-md-6">
-            <h3 class="text-light mb-4">Address</h3>
-            <p class="mb-2">
-              <i class="fa fa-map-marker-alt text-primary me-3"></i>Showroom
-              220, Al Asmawi Building, Umm Al Sheif, Sheikh Zayed Road, Dubai
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-phone-alt text-primary me-3"></i>+0569937768
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-envelope text-primary me-3"></i
-              >snehatvijayan@gmail.com
-            </p>
-            <div class="d-flex pt-2">
-              <a class="btn btn-square btn-outline-body me-1" href=""
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a class="btn btn-square btn-outline-body me-1" href=""
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="btn btn-square btn-outline-body me-1" href=""
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a class="btn btn-square btn-outline-body me-0" href=""
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h3 class="text-light mb-4">Services</h3>
+    <div class="container-fluid bg-dark text-body footer  px-0 wow fadeIn" data-wow-delay="0.1s">
+
+
+      <div class="container py-3">
+        <div class="row g-3">
+          
+    
+          <div class="d-flex justify-content-between">
+  
+            <div class="col-lg-3 col-md-6">
+              <h3 class="text-light mb-4">Services</h3>
             <a class="btn btn-link" href="./kitchens.html">Kitchens</a>
             <a class="btn btn-link" href="./closets.html">Closets</a>
-            <a class="btn btn-link" href="./entertainment.html"
-              >Entertainment Area</a
-            >
+            <a class="btn btn-link" href="./entertainment.html">Entertainment Area</a>
             <a class="btn btn-link" href="./wallcladding.html">Wall Cladding</a>
             <a class="btn btn-link" href="./Maintenance.html">Maintenance</a>
-            <a class="btn btn-link" href="./InteriorDesign.html"
-              >Interior Design</a
-            >
+            <a class="btn btn-link" href="./InteriorDesign.html">Interior Design</a>
           </div>
+          
           <div class="col-lg-3 col-md-6">
             <h3 class="text-light mb-4">Quick Links</h3>
             <a class="btn btn-link" href="./about.html">About Us</a>
@@ -424,27 +486,33 @@
             <a class="btn btn-link" href="./service.html">Our Services</a>
             <a class="btn btn-link" href="./contact.html">Support</a>
           </div>
+    
           <div class="col-lg-3 col-md-6">
             <a href="./index.html" class="ms-4 ms-lg-0">
-              <div>
-                <img
-                  class="me-3"
-                  src="./img/icons/icon-1.png"
-                  alt="Icon"
-                  height="150px"
-                  width="250px"
-                />
-              </div>
-              <div>
-                <h1 class="text-primary m-0" style="font-size: 30px">
-                  MARS INTERIORS
-                </h1>
-              </div>
+              <img class="me-3" src="./img/icons/icon-1.png" alt="Icon" height="100px" width="150px" />
+              <h1 class="text-primary m-0 text-center" style="font-size: 18px">MARS INTERIORS</h1>
             </a>
           </div>
         </div>
+  
+        <div class="col-lg-12 col-md-12 text-center">
+          <h3 class="text-light mb-2">Address</h3>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt text-primary me-3"></i>
+            Showroom 220, Al Asmawi Building, Umm Al Sheif,Sheikh Zayed Road, Dubai
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-phone-alt text-primary me-3"></i>+0569937768
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-envelope text-primary me-3"></i>snehatvijayan@gmail.com
+          </p>
+        </div>
+          
+          
+        </div>
       </div>
-
+      
       <div class="container-fluid copyright">
         <div class="container">
           <div class="row">

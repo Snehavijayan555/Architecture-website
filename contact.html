@@ -113,10 +113,10 @@
           <a href="./index.html" class="nav-item nav-link">Home</a>
           <a href="./kitchens.html" class="nav-item nav-link">Kitchen</a>
           <a href="./closets.html" class="nav-item nav-link">Closets</a>
-          <a href="./wallcladding.html" class="nav-item nav-link">TV Wall</a>
-          <a href="./entertainment.html" class="nav-item nav-link">Kids Room</a>
-          <a href="./Maintenance.html" class="nav-item nav-link">vanities</a>
-          <a href="./InteriorDesign.html" class="nav-item nav-link">Furniture</a>
+          <a href="./tvWall.html" class="nav-item nav-link">TV Wall</a>
+          <a href="./kidsRoom.html" class="nav-item nav-link">Kids Room</a>
+          <a href="./vanities.html" class="nav-item nav-link">vanities</a>
+          <a href="./furniture.html" class="nav-item nav-link">Furniture</a>
           <a href="./service.html" class="nav-item nav-link">Services</a>
           <a href="./project.html" class="nav-item nav-link">Portfolio</a>
           <a href="./about.html" class="nav-item nav-link">About</a>
@@ -320,7 +320,7 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <p class="mb-4">Our Professional Architects and Interior Designers have a unique creative vision of how your dream space will work the best for you. Learn more about our services and contact us. </p>
-                    <form>
+                    <!-- <form>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -347,10 +347,47 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                              <button class="btn btn-primary w-100 py-3" onclick="sendWhatsAppMessage()">
+                                Send Message
+                              </button>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
+
+
+                    <div class="row g-5 wow fadeInUp" data-wow-delay="0.5s">
+                      <div class="row g-3">
+                        <div class="col-12 col-sm-6">
+                          <input type="text" class="form-control" id="userName" placeholder="Your Name" style="height: 55px" />
+                        </div>
+                        <div class="col-12 col-sm-6">
+                          <input type="email" class="form-control" id="userEmail" placeholder="Your Email" style="height: 55px" />
+                        </div>
+                        <div class="col-12 col-sm-6">
+                          <input type="text" class="form-control" id="userMobile" placeholder="Your Mobile" style="height: 55px" />
+                        </div>
+                        <div class="col-12 col-sm-6">
+                          <select class="form-select" id="userService" style="height: 55px">
+                            <option selected>Choose Service</option>
+                            <option value="kitchens">Kitchens</option>
+                            <option value="closets">Closets</option>
+                            <option value="entertainment">Entertainment Area</option>
+                            <option value="cladding">Wall Cladding</option>
+                            <option value="maintenance">Maintenance</option>
+                            <option value="design">Interior Design</option>
+                          </select>
+                        </div>
+                        <div class="col-12">
+                          <textarea class="form-control" id="userMessage" rows="5" placeholder="Message"></textarea>
+                        </div>
+                        <div class="col-12">
+                          <button class="btn btn-primary w-100 py-3" onclick="sendWhatsAppMessage()">
+                            Book Appointment
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -484,6 +521,38 @@
     <script src="./js/main.js"></script>
     <script src="./js/excel.js"></script>
     <script src="./js/whatsapp.js"></script>
+
+
+
+
+    <!-- JavaScript -->
+<script>
+  function sendWhatsAppMessage() {
+    // Get input values
+    const name = document.getElementById('userName').value;
+    const email = document.getElementById('userEmail').value;
+    const mobile = document.getElementById('userMobile').value;
+    const service = document.getElementById('userService').value;
+    const message = document.getElementById('userMessage').value;
+
+    // Construct WhatsApp message
+    const whatsappMessage = `Hi, I would like to book an appointment.
+    Name: ${name}
+    Email: ${email}
+    Mobile: ${mobile}
+    Service: ${service}
+    Message: ${message}`;
+
+    // Replace spaces with '+' and encode other special characters
+    const formattedMessage = whatsappMessage.replace(/\s+/g, '+');
+
+    // Create WhatsApp URL with the formatted message
+    const whatsappURL = `https://wa.me/+971569937768?text=${formattedMessage}`;
+
+    // Open WhatsApp with the message
+    window.open(whatsappURL, '_blank');
+  }
+</script>
 </body>
 
 </html>

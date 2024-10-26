@@ -45,23 +45,10 @@
 
   <body>
     <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div
-        class="spinner-border position-relative text-primary"
-        style="width: 6rem; height: 6rem"
-        role="status"
-      ></div>
-      <img
-        class="position-absolute top-50 start-50 translate-middle"
-        src="./img/icons/icon-1.png"
-        height="35px"
-        width="35px"
-        alt="Icon"
-      />
-    </div>
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
+      <img class="position-absolute top-50 start-50 translate-middle" src="./img/logo.png" height="50px" width="50px"  alt="Icon">
+  </div>
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
@@ -250,18 +237,18 @@
  
            <!-- Services Dropdown -->
            <div class="mb-3">
-             <label for="servicesDropdown" class="form-label">Select Service</label>
-             <select class="form-select" id="servicesDropdown" required>
-               <option value="" disabled selected>Select a service</option>
-               <option value="service1">Kitchen</option>
-                <option value="service2">Closets</option>
-                <option value="service3">Entertainment Area</option>
-                <option value="service3">Wall Cladding</option>
-                <option value="service3">Maintenance</option>
-                <option value="service3">Interior Design</option>
-                <option value="service3">Other</option>
-                </select>
-           </div>
+            <label for="servicesDropdown" class="form-label">Select Service</label>
+            <select class="form-select" id="servicesDropdown" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="service1">Kitchen</option>
+               <option value="service2">Closets</option>
+               <option value="service3">TV Wall</option>
+               <option value="service3">Kids Room</option>
+               <option value="service3">Vanities</option>
+               <option value="service3">Furniture</option>
+               <option value="service3">Other</option>
+               </select>
+          </div>
  
            <!-- Message Input -->
            <div class="mb-3">
@@ -1011,81 +998,42 @@
               </div>
             </div>
           </div>
+
+
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="row g-3">
               <div class="col-12 col-sm-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Name"
-                  style="height: 55px"
-                />
+                <input type="text" class="form-control" id="userName" placeholder="Your Name" style="height: 55px" />
               </div>
               <div class="col-12 col-sm-6">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Your Email"
-                  style="height: 55px"
-                />
+                <input type="email" class="form-control" id="userEmail" placeholder="Your Email" style="height: 55px" />
               </div>
               <div class="col-12 col-sm-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Mobile"
-                  style="height: 55px"
-                />
+                <input type="text" class="form-control" id="userMobile" placeholder="Your Mobile" style="height: 55px" />
               </div>
               <div class="col-12 col-sm-6">
-                <select class="form-select" style="height: 55px">
+                <select class="form-select" id="userService" style="height: 55px">
                   <option selected>Choose Service</option>
-                  <option value="1">kitchens</option>
-                  <option value="2">Closets</option>
-                  <option value="3">Entertainment Area</option>
-                  <option value="4">Wall Cladding</option>
-                  <option value="5">Maintenance</option>
-                  <option value="6">Interior Design</option>
+                  <option value="kitchens">Kitchens</option>
+                  <option value="closets">Closets</option>
+                  <option value="entertainment">Entertainment Area</option>
+                  <option value="cladding">Wall Cladding</option>
+                  <option value="maintenance">Maintenance</option>
+                  <option value="design">Interior Design</option>
                 </select>
               </div>
-              <div class="col-12 col-sm-6" style="position: relative">
-                <div class="date" id="date" data-target-input="nearest">
-                  <input
-                    type="text"
-                    class="form-control datetimepicker-input"
-                    placeholder="Choose Date"
-                    data-target="#date"
-                    data-toggle="datetimepicker"
-                    style="height: 55px"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-sm-6">
-                <div class="time" id="time" data-target-input="nearest">
-                  <input
-                    type="text"
-                    class="form-control datetimepicker-input"
-                    placeholder="Choose Date"
-                    data-target="#time"
-                    data-toggle="datetimepicker"
-                    style="height: 55px"
-                  />
-                </div>
+              <div class="col-12">
+                <textarea class="form-control" id="userMessage" rows="5" placeholder="Message"></textarea>
               </div>
               <div class="col-12">
-                <textarea
-                  class="form-control"
-                  rows="5"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              <div class="col-12">
-                <button class="btn btn-primary w-100 py-3" href="https://wa.me/0569937768?text=Hi">
+                <button class="btn btn-primary w-100 py-3" onclick="sendWhatsAppMessage()">
                   Book Appointment
                 </button>
               </div>
             </div>
           </div>
+
+
         </div>
       </div>
     </div>
@@ -1275,5 +1223,34 @@
     <script src="./js/main.js"></script>
     <script src="./js/excel.js"></script>
     <script src="./js/whatsapp.js"></script>
+
+<!-- JavaScript -->
+<script>
+  function sendWhatsAppMessage() {
+    // Get input values
+    const name = document.getElementById('userName').value;
+    const email = document.getElementById('userEmail').value;
+    const mobile = document.getElementById('userMobile').value;
+    const service = document.getElementById('userService').value;
+    const message = document.getElementById('userMessage').value;
+
+    // Construct WhatsApp message
+    const whatsappMessage = `Hi, I would like to book an appointment.
+    Name: ${name}
+    Email: ${email}
+    Mobile: ${mobile}
+    Service: ${service}
+    Message: ${message}`;
+
+    // Replace spaces with '+' and encode other special characters
+    const formattedMessage = whatsappMessage.replace(/\s+/g, '+');
+
+    // Create WhatsApp URL with the formatted message
+    const whatsappURL = `https://wa.me/+971569937768?text=${formattedMessage}`;
+
+    // Open WhatsApp with the message
+    window.open(whatsappURL, '_blank');
+  }
+</script>
   </body>
 </html>

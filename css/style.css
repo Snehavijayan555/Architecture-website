@@ -248,6 +248,65 @@ h6,
     opacity: 1;
 }
 
+@media (max-width: 768px) {
+    .kitchen-carousel .owl-carousel-item {
+        position: relative;
+        min-height: 500px;
+    }
+
+    .kitchen-carousel .owl-carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .kitchen-carousel .owl-carousel-item p {
+        font-size: 16px !important;
+    }
+}
+
+
+.kitchen-carousel .owl-dots {
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    top: 0;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kitchen-carousel .owl-dots .owl-dot {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin: 5px 0;
+    background: var(--dark);
+    transition: .5s;
+}
+
+.kitchen-carousel .owl-dots .owl-dot.active {
+    width: 60px;
+    height: 60px;
+}
+
+.kitchen-carousel .owl-dots .owl-dot img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 2px;
+    transition: .5s;
+    opacity: .3;
+}
+
+.kitchen-carousel .owl-dots .owl-dot.active img {
+    opacity: 1;
+}
+
 .page-header {
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;

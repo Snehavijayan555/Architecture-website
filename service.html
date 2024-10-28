@@ -81,24 +81,18 @@
       class="navbar navbar-expand-lg bg-dark navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn"
       data-wow-delay="0.1s"
     >
-      <a href="./index.html" class="navbar-brand ms-4 ms-lg-0">
-        <h1 class="text-primary m-0" style="font-size: 20px">
-          <img
-            class="me-3"
-            src="./img/logo.png"
-            alt="Icon"
-            height="50px"
-            width="50px"
-          />
-          <img
+    <a href="./index.html" class="navbar-brand ms-4 ms-lg-0">
+      <h1 class="text-primary m-0" style="font-size: 20px">
+        <img
           class="me-3"
-          src="./img/logo-text.png"
+          src="./img/newLogo.png"
           alt="Icon"
-          height="50px"
-          width="100px"
+          height="40px"
+          width="150px"
         />
-        </h1>
-      </a>
+      
+      </h1>
+    </a>
       <button
         type="button"
         class="navbar-toggler me-4"
@@ -496,6 +490,8 @@
     </div>
     
 
+
+
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-body footer  px-0 wow fadeIn" data-wow-delay="0.1s">
 
@@ -504,7 +500,7 @@
         <div class="row g-3">
           
     
-          <div class="d-flex justify-content-between">
+          <div class="d-flex justify-content-between copyright">
   
             <div class="col-lg-3 col-md-6">
               <h3 class="text-light mb-4">Services</h3>
@@ -526,8 +522,7 @@
     
           <div class="col-lg-3 col-md-6">
             <a href="./index.html" class="ms-4 ms-lg-0">
-              <img class="me-3" src="./img/icons/icon-1.png" alt="Icon" height="100px" width="150px" />
-              <h1 class="text-primary m-0 text-center" style="font-size: 18px">MARS INTERIORS</h1>
+              <img class="me-3" src="./img/fullLogo.png" alt="Icon" height="120px" width="300px" />
             </a>
           </div>
         </div>
@@ -565,13 +560,17 @@
     </div>
     <!-- Footer End -->
 
+       
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
    
 
+
+    
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -589,6 +588,34 @@
     <script src="./js/main.js"></script>
     <script src="./js/excel.js"></script>
     <script src="./js/whatsapp.js"></script>
-</body>
 
+<!-- JavaScript -->
+<script>
+  function sendWhatsAppMessage() {
+    // Get input values
+    const name = document.getElementById('userName').value;
+    const email = document.getElementById('userEmail').value;
+    const mobile = document.getElementById('userMobile').value;
+    const service = document.getElementById('userService').value;
+    const message = document.getElementById('userMessage').value;
+
+    // Construct WhatsApp message
+    const whatsappMessage = `Hi, I would like to book an appointment.
+    Name: ${name}
+    Email: ${email}
+    Mobile: ${mobile}
+    Service: ${service}
+    Message: ${message}`;
+
+    // Replace spaces with '+' and encode other special characters
+    const formattedMessage = whatsappMessage.replace(/\s+/g, '+');
+
+    // Create WhatsApp URL with the formatted message
+    const whatsappURL = `https://wa.me/+971569937768?text=${formattedMessage}`;
+
+    // Open WhatsApp with the message
+    window.open(whatsappURL, '_blank');
+  }
+</script>
+  </body>
 </html>

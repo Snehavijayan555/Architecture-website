@@ -41,6 +41,219 @@
 
     <!-- Template Stylesheet -->
     <link href="./css/style.css" rel="stylesheet" />
+
+    <style>
+      @supports (position: absolute) {
+        #hotspots-container {
+          display: block !important;
+          max-height: none !important;
+        }
+
+        #fallback {
+          display: none;
+        }
+      }
+    </style>
+
+    <style>
+      /* Kitchen text styling */
+      .image-text {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+
+      .highlight {
+        font-weight: bold;
+        display: inline-block;
+        background: #ffffff;
+        color: #193549;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        animation: pulse 1.5s infinite;
+        cursor: pointer;
+      }
+
+      .highlight:hover {
+        background: #ece0e0;
+        color: #000000;
+      }
+
+      #content1 {
+        bottom: 85%; /* Content above label 1 */
+        left: 55%; /* Align closer to hotspot 1 */
+      }
+
+      #content2 {
+        bottom: 69%; /* Content above label 2 */
+        left: 8%; /* Align closer to hotspot 2 */
+      }
+
+      #content3 {
+        bottom: 42%; /* Content above label 3 */
+        left: 57%; /* Align closer to hotspot 3 */
+      }
+
+      #content4 {
+        bottom: 42%; /* Content above label 3 */
+        left: 15%; /* Align closer to hotspot 3 */
+      }
+
+      #content5 {
+        bottom: 65%; /* Content above label 3 */
+        left: 36%; /* Align closer to hotspot 3 */
+      }
+
+      /* Content appears above each hotspot */
+      .hotspot-content {
+        position: absolute;
+        width: 40%; /* Adjust size */
+        left: 10%; /* Align within container */
+        display: none;
+        padding: 1.5rem;
+        text-align: center;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Position content above respective labels */
+      #b1:hover ~ #content1 {
+        display: block;
+        bottom: 80%; /* Content above label 1 */
+      }
+
+      #b2:hover ~ #content2 {
+        display: block;
+        bottom: 64%; /* Content above label 2 */
+      }
+
+      #b3:hover ~ #content3 {
+        display: block;
+        bottom: 37%; /* Content above label 3 */
+      }
+
+      #b4:hover ~ #content4 {
+        display: block;
+        bottom: 37%; /* Content above label 3 */
+      }
+
+      #b5:hover ~ #content5 {
+        display: block;
+        bottom: 37%; /* Content above label 3 */
+      }
+
+      /* Adjust positions for labels */
+      #b1 {
+        left: 73%;
+        top: 22%;
+      }
+
+      #b2 {
+        left: 24%;
+        top: 38%;
+      }
+
+      #b3 {
+        left: 67%;
+        top: 64%;
+      }
+
+      #b4 {
+        left: 25%;
+        top: 64%;
+      }
+
+      #b5 {
+        left: 46%;
+        top: 47%;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .text-grey {
+        color: #193549;
+      }
+
+      .rounded {
+        border-radius: 4px;
+      }
+
+      .shadow {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      }
+
+      .bg-white {
+        background: #000000;
+      }
+
+      .absolute {
+        position: absolute;
+      }
+
+      #hotspots1:checked ~ #content1,
+      #hotspots2:checked ~ #content2,
+      #hotspots3:checked ~ #content3,
+      #hotspots4:checked ~ #content4,
+      #hotspots5:checked ~ #content5 {
+        display: block;
+        margin: 2rem;
+        width: 90%;
+      }
+      @keyframes pulse {
+        from {
+          box-shadow: 0 0 0 0px #5f5f5f;
+        }
+        to {
+          box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+        }
+      }
+
+      .text-outline {
+        position: absolute;
+        bottom: 20px; /* Adjust as needed */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        font-size: 3rem; /* Adjust font size as needed */
+        text-align: center;
+        font-family: DmSans-Heading;
+        color: #c29e7c; /* Set text color to transparent */
+        -webkit-background-clip: text; /* For Safari */
+        background-clip: text; /* For other browsers */
+        background-image: linear-gradient(white, white); /* White gradient */
+        text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+          1px 1px 0 #ffffff; /* White outline effect */
+      }
+    </style>
+    <style>
+      .selectable-item {
+          cursor: pointer;
+          padding: 10px;
+          border: 2px solid transparent;
+          transition: border-color 0.3s;
+      }
+  
+      input:checked + .selectable-item {
+          border-color: #C29E7C;
+      }
+  
+      .form-section {
+          margin-bottom: 30px;
+      }
+  
+      .d-flex {
+          justify-content: center;
+      }
+  </style>
   </head>
 
   <body>
@@ -63,31 +276,6 @@
       />
     </div>
     <!-- Spinner End -->
-
-    <!-- Topbar Start -->
-    <!-- <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-3">
-                    <a class="text-body px-2" href="tel:+0123456789"><i class="fa fa-phone-alt text-primary me-2"></i>+012 345 6789</a>
-                    <a class="text-body px-2" href="mailto:info@example.com"><i class="fa fa-envelope-open text-primary me-2"></i>snehatvijayan@gmail.com.com</a>
-                </div>
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-2">
-                    <a class="text-body px-2" href="">Terms</a>
-                    <a class="text-body px-2" href="">Privacy</a>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Topbar End -->
 
     <!-- Navbar Start -->
     <nav
@@ -131,14 +319,12 @@
           <a href="./contact.html" class="nav-item nav-link">Contact</a>
         </div>
 
-        <!-- Bootstrap Modal Trigger-->
         <button
           type="button"
           class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#contactModal"
+          onclick="copyToClipboard('+0569937768')"
         >
-          Get Estimate
+          +0569937768
         </button>
 
         <!-- Modal Structure -->
@@ -286,7 +472,7 @@
               </p>
               <button type="button" class="btn btn-primary">Contact Us</button>
             </div>
-            <div class="col-md-6" style="min-height: 350px">
+            <div class="col-md-6" style="min-height: 350px; position: relative">
               <div class="position-relative h-100">
                 <img
                   class="position-absolute img-fluid w-100 h-100"
@@ -294,6 +480,8 @@
                   style="object-fit: cover"
                   alt=""
                 />
+                <h2 class="text-outline">KITCHEN</h2>
+                <!-- Text overlay -->
               </div>
             </div>
           </div>
@@ -402,7 +590,7 @@
       >
         <div>
           <div class="d-flex">
-            <div class=" p-3">
+            <div class="p-3">
               <img
                 class="img-fluid"
                 src="./img/carousel-3.jpg"
@@ -420,24 +608,24 @@
             </div>
           </div>
           <div class="d-flex">
-          <div class=" p-3 ">
-            <img
-              class="img-fluid"
-              src="./img/carousel-3.jpg"
-              alt=""
-              style="height: 200px"
-            />
-          </div>
-          <div class="p-3">
-            <img
-              class="img-fluid"
-              src="./img/carousel-3.jpg"
-              alt=""
-              style="height: 200px"
-            />
+            <div class="p-3">
+              <img
+                class="img-fluid"
+                src="./img/carousel-3.jpg"
+                alt=""
+                style="height: 200px"
+              />
+            </div>
+            <div class="p-3">
+              <img
+                class="img-fluid"
+                src="./img/carousel-3.jpg"
+                alt=""
+                style="height: 200px"
+              />
+            </div>
           </div>
         </div>
-      </div>
 
         <div class="col-md-6 p-3">
           <h6 class="section-title">Our Projects</h6>
@@ -456,7 +644,7 @@
       </div>
       <!-- Carousel End -->
 
-      <div class="container">
+      <!-- <div class="container">
         <div
           class="text-center mx-auto mb-5 wow fadeInUp"
           data-wow-delay="0.1s"
@@ -571,9 +759,260 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- Project End -->
+
+    <div class="container-fluid">
+      <div
+        id="hotspots-container"
+        class="hidden w-90 mw-1200 mx-auto rounded shadow text-center"
+        style="
+          background: url(/img/carousel-3.jpg) center / cover no-repeat;
+          display: none;
+          max-height: 0;
+          overflow: hidden;
+          mso-hide: all;
+        "
+      >
+        <div
+          style="padding-bottom: 66.66%; position: relative"
+          class="text-center"
+        >
+          <!-- Text on Top Center -->
+          <div class="image-text">5 ELEMENTS OF A GREAT KITCHEN</div>
+          <!-- Hotspot Labels -->
+          <label for="hotspots1" id="b1" class="highlight absolute py-1 px-4"
+            >Facades</label
+          >
+          <label for="hotspots2" id="b2" class="highlight absolute py-1 px-4"
+            >Worktop</label
+          >
+          <label for="hotspots3" id="b3" class="highlight absolute py-1 px-4"
+            >Excellence in Workmanship</label
+          >
+
+          <label for="hotspots4" id="b4" class="highlight absolute py-1 px-4"
+            >Excellence in Workmanship</label
+          >
+
+          <label for="hotspots5" id="b5" class="highlight absolute py-1 px-4"
+            >Excellence in Workmanship</label
+          >
+
+          <!-- Content for Each Hotspot -->
+          <div id="content1" class="hotspot-content bg-white rounded shadow">
+            <p class="m-2 text-s leading-relaxed">
+              Found in Akaka Falls State Park, Akaka Falls is a magnificent
+              sight, cascading 135 metres from a cliff in lush, misty
+              rainforest. Twice the height of Niagara Falls, the free-falling
+              Akaka Falls have a strong flow year-round.
+            </p>
+          </div>
+
+          <div id="content2" class="hotspot-content bg-white rounded shadow">
+            <p class="m-2 text-s leading-relaxed">
+              With lava flows dating back some 250,000 years ago, Kilauea is the
+              youngest of the 5 active volcanoes in Hawaii – but it's also the
+              feistiest.
+            </p>
+          </div>
+
+          <div id="content3" class="hotspot-content bg-white rounded shadow">
+            <p class="m-2 text-s leading-relaxed">
+              Molokai island’s towering sea cliffs give it a dramatic landscape,
+              but there’s just as much beauty to behold in the depths of the sea
+              waters that surround it.
+            </p>
+          </div>
+
+          <div id="content4" class="hotspot-content bg-white rounded shadow">
+            <p class="m-2 text-s leading-relaxed">
+              Molokai island’s towering sea cliffs give it a dramatic landscape,
+              but there’s just as much beauty to behold in the depths of the sea
+              waters that surround it.
+            </p>
+          </div>
+
+          <div id="content5" class="hotspot-content bg-white rounded shadow">
+            <p class="m-2 text-s leading-relaxed">
+              Molokai island’s towering sea cliffs give it a dramatic landscape,
+              but there’s just as much beauty to behold in the depths of the sea
+              waters that surround it.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="fallback" class="text-center bold text-m"></div>
+    </div>
+
+    <div class="container my-5">
+      <div
+        class="text-center mx-auto mb-5 wow fadeInUp"
+        data-wow-delay="0.1s"
+        style="max-width: 600px"
+      >
+        <h4 class="section-title">Our Projects</h4>
+        <h1 class="display-5 mb-4">
+          Visit Our Latest Projects And Our Innovative Works
+        </h1>
+      </div>
+      <div>
+        <div class="d-flex gap-5">
+          <div class="text-center">
+            <img src="./img/service-1.jpg" alt="" width="355" height="418px" />
+            <div class="p-4">
+              <h6 class="fw-bold">MODERN LUXURY</h6>
+              <p>
+                Style combines neutral colors, high-quality materials, modern
+                technologies & appliances, and minimalist design to create a
+                chic culinary space.
+              </p>
+            </div>
+          </div>
+          <div class="text-center">
+            <img src="./img/service-1.jpg" alt="" width="355" height="418px" />
+            <div class="p-4">
+              <h6 class="fw-bold">MODERN LUXURY</h6>
+              <p>
+                Style combines neutral colors, high-quality materials, modern
+                technologies & appliances, and minimalist design to create a
+                chic culinary space.
+              </p>
+            </div>
+          </div>
+          <div class="text-center">
+            <img src="./img/service-1.jpg" alt="" width="355" height="418px" />
+            <div class="p-4">
+              <h6 class="fw-bold">MODERN LUXURY</h6>
+              <p>
+                Style combines neutral colors, high-quality materials, modern
+                technologies & appliances, and minimalist design to create a
+                chic culinary space.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="d-flex gap-5">
+          <div class="text-center">
+            <img src="./img/service-1.jpg" alt="" width="355" height="418px" />
+            <div class="p-4">
+              <h6 class="fw-bold">MODERN LUXURY</h6>
+              <p>
+                Style combines neutral colors, high-quality materials, modern
+                technologies & appliances, and minimalist design to create a
+                chic culinary space.
+              </p>
+            </div>
+          </div>
+          <div class="text-center">
+            <img src="./img/service-1.jpg" alt="" width="355" height="418px" />
+            <div class="p-4">
+              <h6 class="fw-bold">MODERN LUXURY</h6>
+              <p>
+                Style combines neutral colors, high-quality materials, modern
+                technologies & appliances, and minimalist design to create a
+                chic culinary space.
+              </p>
+            </div>
+          </div>
+          <div class="text-center">
+            <img src="./img/service-1.jpg" alt="" width="355" height="418px" />
+            <div class="p-4">
+              <h6 class="fw-bold">MODERN LUXURY</h6>
+              <p>
+                Style combines neutral colors, high-quality materials, modern
+                technologies & appliances, and minimalist design to create a
+                chic culinary space.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <h1 class="text-center mb-4">KITCHEN PRICE CALCULATOR</h1>
+  
+      <form id="kitchenForm">
+          <!-- Section 1: Style -->
+          <div class="form-section">
+              <h3>Choose Style</h3>
+              <div class="d-flex gap-5 flex-wrap">
+                  <div class="text-center">
+                      <input type="radio" id="style1" name="kitchenStyle" value="Luxury" hidden>
+                      <label for="style1" class="selectable-item">
+                          <img src="./img/kitchen-1.jpg" alt="Luxury Kitchen" width="300" height="200">
+                          <p>Luxury Kitchen</p>
+                      </label>
+                  </div>
+                  <div class="text-center">
+                      <input type="radio" id="style2" name="kitchenStyle" value="Modern" hidden>
+                      <label for="style2" class="selectable-item">
+                          <img src="./img/kitchen-2.jpg" alt="Modern Kitchen" width="300" height="200">
+                          <p>Modern Kitchen</p>
+                      </label>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Section 2: Material -->
+          <div class="form-section d-none">
+              <h3>Choose Material</h3>
+              <div class="d-flex gap-5 flex-wrap">
+                  <div class="text-center">
+                      <input type="radio" id="material1" name="kitchenMaterial" value="Granite" hidden>
+                      <label for="material1" class="selectable-item">
+                          <img src="./img/service-1.jpg" alt="Granite" width="300" height="200">
+                          <p>Granite</p>
+                      </label>
+                  </div>
+                  <div class="text-center">
+                      <input type="radio" id="material2" name="kitchenMaterial" value="Marble" hidden>
+                      <label for="material2" class="selectable-item">
+                          <img src="./img/service-2.jpg" alt="Marble" width="300" height="200">
+                          <p>Marble</p>
+                      </label>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Section 3: Appliances -->
+          <div class="form-section d-none">
+              <h3>Choose Appliances</h3>
+              <div class="d-flex gap-5 flex-wrap">
+                  <div class="text-center">
+                      <input type="checkbox" id="appliance1" name="appliances" value="Oven" hidden>
+                      <label for="appliance1" class="selectable-item">
+                          <p>Oven</p>
+                      </label>
+                  </div>
+                  <div class="text-center">
+                      <input type="checkbox" id="appliance2" name="appliances" value="Refrigerator" hidden>
+                      <label for="appliance2" class="selectable-item">
+                          <p>Refrigerator</p>
+                      </label>
+                  </div>
+                  <div class="text-center">
+                      <input type="checkbox" id="appliance3" name="appliances" value="Dishwasher" hidden>
+                      <label for="appliance3" class="selectable-item">
+                          <p>Dishwasher</p>
+                      </label>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Navigation Buttons -->
+          <div class="mt-4 d-flex justify-content-between">
+              <button type="button" class="btn btn-secondary" id="prevButton" disabled>Previous</button>
+              <button type="button" class="btn btn-primary" id="nextButton">Next</button>
+          </div>
+      </form>
+  </div>
+
 
     <div class="social-media-sticky">
       <div class="d-flex justify-content-around social-media-icons">
@@ -713,11 +1152,11 @@
 
         // Construct WhatsApp message
         const whatsappMessage = `Hi, I would like to book an appointment.
-    Name: ${name}
-    Email: ${email}
-    Mobile: ${mobile}
-    Service: ${service}
-    Message: ${message}`;
+                  Name: ${name}
+                  Email: ${email}
+                  Mobile: ${mobile}
+                  Service: ${service}
+                  Message: ${message}`;
 
         // Replace spaces with '+' and encode other special characters
         const formattedMessage = whatsappMessage.replace(/\s+/g, "+");
@@ -728,7 +1167,59 @@
         // Open WhatsApp with the message
         window.open(whatsappURL, "_blank");
       }
-      
     </script>
+
+    <script>
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(
+          () => {
+            console.log("Phone Number Copied!");
+          },
+          (err) => {
+            console.error("Failed to copy: ", err);
+          }
+        );
+      }
+    </script>
+    <script>
+      const sections = document.querySelectorAll('.form-section');
+      let currentSectionIndex = 0;
+  
+      const nextButton = document.getElementById('nextButton');
+      const prevButton = document.getElementById('prevButton');
+  
+      // Function to show the current section based on index
+      function showSection(index) {
+          sections.forEach((section, i) => {
+              section.classList.toggle('d-none', i !== index);
+          });
+  
+          // Update button states
+          prevButton.disabled = index === 0;
+          nextButton.textContent = index === sections.length - 1 ? 'Submit' : 'Next';
+      }
+  
+      // Next button event
+      nextButton.addEventListener('click', () => {
+          if (currentSectionIndex < sections.length - 1) {
+              currentSectionIndex++;
+              showSection(currentSectionIndex);
+          } else {
+              // Submit the form on the final step
+              alert('Form submitted!');
+          }
+      });
+  
+      // Previous button event
+      prevButton.addEventListener('click', () => {
+          if (currentSectionIndex > 0) {
+              currentSectionIndex--;
+              showSection(currentSectionIndex);
+          }
+      });
+  
+      // Initialize the first section
+      showSection(currentSectionIndex);
+  </script>
   </body>
 </html>

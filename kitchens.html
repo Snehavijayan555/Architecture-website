@@ -58,48 +58,44 @@
     <style>
       /* Kitchen text styling */
       .image-text {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: bold;
-  }
-  .highlight {
-    font-weight: bold;
-    display: inline-block;
-    background: #ffffff;
-    color: #193549;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    animation: pulse 1.5s infinite;
-    cursor: pointer;
-  }
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+      .highlight {
+        font-weight: bold;
+        display: inline-block;
+        background: #ffffff;
+        color: #193549;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        animation: pulse 1.5s infinite;
+        cursor: pointer;
+      }
 
-  .highlight:hover {
-    background: #ece0e0;
-    color: #000000;
-  }
+      .highlight:hover {
+        background: #ece0e0;
+        color: #000000;
+      }
 
-  .hotspot-content {
-    position: absolute;
-    width: 40%;
-    left: 10%;
-    display: none;
-    padding: 1.5rem;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-
-
-     
-
+      .hotspot-content {
+        position: absolute;
+        width: 40%;
+        left: 10%;
+        display: none;
+        padding: 1.5rem;
+        text-align: center;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
 
       /* Position content above respective labels */
       #b1:hover ~ #content1 {
@@ -214,104 +210,124 @@
           1px 1px 0 #ffffff; /* White outline effect */
       }
 
-
       @media (max-width: 1024px) {
-    .image-text {
-      font-size: 1.8rem;
-    }
+        .image-text {
+          font-size: 1.8rem;
+        }
 
-    .highlight {
-      font-size: 1rem;
-      padding: 0.3rem 0.6rem;
-    }
+        .highlight {
+          font-size: 1rem;
+          padding: 0.3rem 0.6rem;
+        }
 
-    .hotspot-content {
-      width: 60%;
-      padding: 1rem;
-    }
-  }
+        .hotspot-content {
+          width: 60%;
+          padding: 1rem;
+        }
+      }
 
-  @media (max-width: 768px) {
-    .image-text {
-      font-size: 1.5rem;
-    }
+      @media (max-width: 768px) {
+        .image-text {
+          font-size: 1.5rem;
+        }
 
-    .highlight {
-      font-size: 0.9rem;
-      padding: 0.2rem 0.5rem;
-    }
+        .highlight {
+          font-size: 0.9rem;
+          padding: 0.2rem 0.5rem;
+        }
 
-    .hotspot-content {
-      width: 80%;
-    }
-  }
+        .hotspot-content {
+          width: 80%;
+        }
+      }
 
-  @media (max-width: 480px) {
-    .image-text {
-      font-size: 1.2rem;
-    }
+      @media (max-width: 480px) {
+        .image-text {
+          font-size: 1.2rem;
+        }
 
-    .highlight {
-      font-size: 0.8rem;
-      padding: 0.1rem 0.4rem;
-    }
+        .highlight {
+          font-size: 0.8rem;
+          padding: 0.1rem 0.4rem;
+        }
 
-    .hotspot-content {
-      width: 90%;
-    }
-  }
+        .hotspot-content {
+          width: 90%;
+        }
+      }
 
-  /* Adjust Label Positions Responsively */
-  @media (max-width: 768px) {
-    #b1 {
-      left: 65%;
-      top: 20%;
-    }
+      /* Adjust Label Positions Responsively */
+      @media (max-width: 768px) {
+        #b1 {
+          left: 65%;
+          top: 20%;
+        }
 
-    #b2 {
-      left: 18%;
-      top: 35%;
-    }
+        #b2 {
+          left: 18%;
+          top: 35%;
+        }
 
-     #b4 {
-      top: 55%;
-    }
+        #b4 {
+          top: 55%;
+        }
 
-    #b3 {
-      top: 35%;
-      left: 60%;
-    }
+        #b3 {
+          top: 35%;
+          left: 60%;
+        }
 
-    #b4 {
-      left: 20%;
-    }
+        #b4 {
+          left: 20%;
+        }
 
-    #b5 {
-      top: 75%;
-      left: 40%;
-    }
-  }
+        #b5 {
+          top: 75%;
+          left: 40%;
+        }
+      }
     </style>
     <style>
       .selectable-item {
-          cursor: pointer;
-          padding: 10px;
-          border: 2px solid transparent;
-          transition: border-color 0.3s;
+        cursor: pointer;
+        padding: 10px;
+        border: 2px solid transparent;
+        transition: border-color 0.3s;
       }
-  
+
       input:checked + .selectable-item {
-          border-color: #C29E7C;
+        border-color: #c29e7c;
       }
-  
+
       .form-section {
-          margin-bottom: 30px;
+        margin-bottom: 30px;
       }
-  
+
       .d-flex {
-          justify-content: center;
+        justify-content: center;
       }
-  </style>
+
+      .project-card {
+        max-width: 355px;
+        overflow: hidden; /* Ensures the zoomed image stays within the container */
+      }
+
+      .img-container {
+        overflow: hidden;
+        border-radius: 8px; /* Optional: Adds rounded corners */
+      }
+
+      .project-img {
+        width: 100%;
+        height: 418px;
+        object-fit: cover;
+        transition: transform 0.5s ease; /* Smooth zoom transition */
+      }
+
+      .img-container:hover .project-img {
+        transform: scale(1.1); /* Zoom-in effect */
+      }
+    </style>
   </head>
 
   <body>
@@ -366,7 +382,7 @@
           <a href="./closets.html" class="nav-item nav-link">Closets</a>
           <a href="./tvWall.html" class="nav-item nav-link">TV Wall</a>
           <a href="./kidsRoom.html" class="nav-item nav-link">Kids Room</a>
-          <a href="./vanities.html" class="nav-item nav-link">vanities</a>
+          <a href="./vanities.html" class="nav-item nav-link">Vanities</a>
           <a href="./furniture.html" class="nav-item nav-link"
             >Other Furnitures</a
           >
@@ -381,111 +397,12 @@
           type="button"
           class="btn btn-primary"
           onclick="copyToClipboard('+0569937768')"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Click To Copy !"
         >
           +0569937768
         </button>
-
-        <!-- Modal Structure -->
-        <div
-          class="modal fade"
-          id="contactModal"
-          tabindex="-1"
-          aria-labelledby="contactModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="contactModalLabel">Get Estimate</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <form>
-                  <!-- Name Input -->
-                  <div class="mb-3">
-                    <label for="nameInput" class="form-label">Name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="nameInput"
-                      placeholder="Enter your name"
-                      required
-                    />
-                  </div>
-
-                  <!-- Phone Number Input -->
-                  <div class="mb-3">
-                    <label for="phoneInput" class="form-label"
-                      >Phone Number</label
-                    >
-                    <input
-                      type="tel"
-                      class="form-control"
-                      id="phoneInput"
-                      placeholder="Enter your phone number"
-                      required
-                    />
-                  </div>
-
-                  <!-- Services Dropdown -->
-                  <div class="mb-3">
-                    <label for="servicesDropdown" class="form-label"
-                      >Select Service</label
-                    >
-                    <select class="form-select" id="servicesDropdown" required>
-                      <option value="" disabled selected>
-                        Select a service
-                      </option>
-                      <option value="service1">Kitchen</option>
-                      <option value="service2">Closets</option>
-                      <option value="service3">TV Wall</option>
-                      <option value="service3">Kids Room</option>
-                      <option value="service3">Vanities</option>
-                      <option value="service3">Furniture</option>
-                      <option value="service3">Other</option>
-                    </select>
-                  </div>
-
-                  <!-- Message Input -->
-                  <div class="mb-3">
-                    <label for="messageTextarea" class="form-label"
-                      >Message Details</label
-                    >
-                    <textarea
-                      class="form-control"
-                      id="messageTextarea"
-                      rows="3"
-                      placeholder="Enter your message"
-                    ></textarea>
-                  </div>
-
-                  <!-- File Upload -->
-                  <div class="mb-3">
-                    <label for="fileUpload" class="form-label"
-                      >Upload File</label
-                    >
-                    <input class="form-control" type="file" id="fileUpload" />
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </nav>
     <!-- Navbar End -->
@@ -701,11 +618,7 @@
         </div>
       </div>
       <!-- Carousel End -->
-
-     
     </div>
-
-    
 
     <div class="container-fluid">
       <div
@@ -803,9 +716,11 @@
         </h1>
       </div>
       <div>
-        <div class="d-flex gap-5 flex-wrap ">
-          <div class="text-center col-md-3 col-12">
-            <img src="./img/service-1.jpg" alt="" class="img-fluid" width="355" height="418px" />
+        <div class="d-flex gap-5 flex-wrap justify-content-center">
+          <div class="text-center col-md-3 col-12 project-card">
+            <div class="img-container">
+              <img src="./img/service-1.jpg" alt="" class="project-img" />
+            </div>
             <div class="p-4">
               <h6 class="fw-bold">MODERN LUXURY</h6>
               <p>
@@ -815,10 +730,13 @@
               </p>
             </div>
           </div>
-          <div class="text-center col-md-3 col-12">
-            <img src="./img/service-1.jpg" class="img-fluid" alt="" width="355" height="418px" />
+
+          <div class="text-center col-md-3 col-12 project-card">
+            <div class="img-container">
+              <img src="./img/kitchen-12.jpg" alt="" class="project-img" />
+            </div>
             <div class="p-4">
-              <h6 class="fw-bold">MODERN LUXURY</h6>
+              <h6 class="fw-bold">MODERN MINIMALIST</h6>
               <p>
                 Style combines neutral colors, high-quality materials, modern
                 technologies & appliances, and minimalist design to create a
@@ -826,8 +744,11 @@
               </p>
             </div>
           </div>
-          <div class="text-center col-md-3 col-12">
-            <img src="./img/service-1.jpg" alt="" class="img-fluid" width="355" height="418px" />
+
+          <div class="text-center col-md-3 col-12 project-card">
+            <div class="img-container">
+              <img src="./img/kitchen-11.jpg" alt="" class="project-img" />
+            </div>
             <div class="p-4">
               <h6 class="fw-bold">MODERN LUXURY</h6>
               <p>
@@ -839,10 +760,13 @@
           </div>
         </div>
       </div>
+
       <div>
-        <div class="d-flex gap-5 flex-wrap">
-          <div class="text-center col-md-3 col-12">
-            <img src="./img/service-1.jpg" alt="" class="img-fluid" width="355" height="418px" />
+        <div class="d-flex gap-5 flex-wrap justify-content-center">
+          <div class="text-center col-md-3 col-12 project-card">
+            <div class="img-container">
+              <img src="./img/kitchen-13.jpg" alt="" class="project-img" />
+            </div>
             <div class="p-4">
               <h6 class="fw-bold">MODERN LUXURY</h6>
               <p>
@@ -852,8 +776,11 @@
               </p>
             </div>
           </div>
-          <div class="text-center col-md-3 col-12">
-            <img src="./img/service-1.jpg" alt="" class="img-fluid" width="355" height="418px" />
+
+          <div class="text-center col-md-3 col-12 project-card">
+            <div class="img-container">
+              <img src="./img/kitchen-14.jpg" alt="" class="project-img" />
+            </div>
             <div class="p-4">
               <h6 class="fw-bold">MODERN LUXURY</h6>
               <p>
@@ -863,8 +790,11 @@
               </p>
             </div>
           </div>
-          <div class="text-center col-md-3 col-12">
-            <img src="./img/service-1.jpg" alt="" class="img-fluid" width="355" height="418px" />
+
+          <div class="text-center col-md-3 col-12 project-card">
+            <div class="img-container">
+              <img src="./img/kitchen-15.jpg" alt="" class="project-img" />
+            </div>
             <div class="p-4">
               <h6 class="fw-bold">MODERN LUXURY</h6>
               <p>
@@ -880,83 +810,153 @@
 
     <div class="container my-5">
       <h1 class="text-center mb-4">KITCHEN PRICE CALCULATOR</h1>
-  
-      <form id="kitchenForm">
-          <!-- Section 1: Style -->
-          <div class="form-section">
-              <h3>Choose Style</h3>
-              <div class="d-flex gap-5 flex-wrap">
-                  <div class="text-center">
-                      <input type="radio" id="style1" name="kitchenStyle" value="Luxury" hidden>
-                      <label for="style1" class="selectable-item">
-                          <img src="./img/kitchen-1.jpg" alt="Luxury Kitchen" width="300" height="200">
-                          <p>Luxury Kitchen</p>
-                      </label>
-                  </div>
-                  <div class="text-center">
-                      <input type="radio" id="style2" name="kitchenStyle" value="Modern" hidden>
-                      <label for="style2" class="selectable-item">
-                          <img src="./img/kitchen-2.jpg" alt="Modern Kitchen" width="300" height="200">
-                          <p>Modern Kitchen</p>
-                      </label>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Section 2: Material -->
-          <div class="form-section d-none">
-              <h3>Choose Material</h3>
-              <div class="d-flex gap-5 flex-wrap">
-                  <div class="text-center">
-                      <input type="radio" id="material1" name="kitchenMaterial" value="Granite" hidden>
-                      <label for="material1" class="selectable-item">
-                          <img src="./img/service-1.jpg" alt="Granite" width="300" height="200">
-                          <p>Granite</p>
-                      </label>
-                  </div>
-                  <div class="text-center">
-                      <input type="radio" id="material2" name="kitchenMaterial" value="Marble" hidden>
-                      <label for="material2" class="selectable-item">
-                          <img src="./img/service-2.jpg" alt="Marble" width="300" height="200">
-                          <p>Marble</p>
-                      </label>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Section 3: Appliances -->
-          <div class="form-section d-none">
-              <h3>Choose Appliances</h3>
-              <div class="d-flex gap-5 flex-wrap">
-                  <div class="text-center">
-                      <input type="checkbox" id="appliance1" name="appliances" value="Oven" hidden>
-                      <label for="appliance1" class="selectable-item">
-                          <p>Oven</p>
-                      </label>
-                  </div>
-                  <div class="text-center">
-                      <input type="checkbox" id="appliance2" name="appliances" value="Refrigerator" hidden>
-                      <label for="appliance2" class="selectable-item">
-                          <p>Refrigerator</p>
-                      </label>
-                  </div>
-                  <div class="text-center">
-                      <input type="checkbox" id="appliance3" name="appliances" value="Dishwasher" hidden>
-                      <label for="appliance3" class="selectable-item">
-                          <p>Dishwasher</p>
-                      </label>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Navigation Buttons -->
-          <div class="mt-4 d-flex justify-content-between">
-              <button type="button" class="btn btn-secondary" id="prevButton" disabled>Previous</button>
-              <button type="button" class="btn btn-primary" id="nextButton">Next</button>
-          </div>
-      </form>
-  </div>
 
+      <form id="kitchenForm">
+        <!-- Section 1: Style -->
+        <div class="form-section">
+          <h3>Choose Style</h3>
+          <div class="d-flex gap-5 flex-wrap">
+            <div class="text-center">
+              <input
+                type="radio"
+                id="style1"
+                name="kitchenStyle"
+                value="Luxury"
+                hidden
+              />
+              <label for="style1" class="selectable-item">
+                <img
+                  src="./img/kitchen-1.jpg"
+                  alt="Luxury Kitchen"
+                  width="300"
+                  height="200"
+                />
+                <p>Luxury Kitchen</p>
+              </label>
+            </div>
+            <div class="text-center">
+              <input
+                type="radio"
+                id="style2"
+                name="kitchenStyle"
+                value="Modern"
+                hidden
+              />
+              <label for="style2" class="selectable-item">
+                <img
+                  src="./img/kitchen-2.jpg"
+                  alt="Modern Kitchen"
+                  width="300"
+                  height="200"
+                />
+                <p>Modern Kitchen</p>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Material -->
+        <div class="form-section d-none">
+          <h3>Choose Material</h3>
+          <div class="d-flex gap-5 flex-wrap">
+            <div class="text-center">
+              <input
+                type="radio"
+                id="material1"
+                name="kitchenMaterial"
+                value="Granite"
+                hidden
+              />
+              <label for="material1" class="selectable-item">
+                <img
+                  src="./img/service-1.jpg"
+                  alt="Granite"
+                  width="300"
+                  height="200"
+                />
+                <p>Granite</p>
+              </label>
+            </div>
+            <div class="text-center">
+              <input
+                type="radio"
+                id="material2"
+                name="kitchenMaterial"
+                value="Marble"
+                hidden
+              />
+              <label for="material2" class="selectable-item">
+                <img
+                  src="./img/service-2.jpg"
+                  alt="Marble"
+                  width="300"
+                  height="200"
+                />
+                <p>Marble</p>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: Appliances -->
+        <div class="form-section d-none">
+          <h3>Choose Appliances</h3>
+          <div class="d-flex gap-5 flex-wrap">
+            <div class="text-center">
+              <input
+                type="checkbox"
+                id="appliance1"
+                name="appliances"
+                value="Oven"
+                hidden
+              />
+              <label for="appliance1" class="selectable-item">
+                <p>Oven</p>
+              </label>
+            </div>
+            <div class="text-center">
+              <input
+                type="checkbox"
+                id="appliance2"
+                name="appliances"
+                value="Refrigerator"
+                hidden
+              />
+              <label for="appliance2" class="selectable-item">
+                <p>Refrigerator</p>
+              </label>
+            </div>
+            <div class="text-center">
+              <input
+                type="checkbox"
+                id="appliance3"
+                name="appliances"
+                value="Dishwasher"
+                hidden
+              />
+              <label for="appliance3" class="selectable-item">
+                <p>Dishwasher</p>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="mt-4 d-flex justify-content-between">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            id="prevButton"
+            disabled
+          >
+            Previous
+          </button>
+          <button type="button" class="btn btn-primary" id="nextButton">
+            Next
+          </button>
+        </div>
+      </form>
+    </div>
 
     <div class="social-media-sticky">
       <div class="d-flex justify-content-around social-media-icons">
@@ -1126,44 +1126,45 @@
       }
     </script>
     <script>
-      const sections = document.querySelectorAll('.form-section');
+      const sections = document.querySelectorAll(".form-section");
       let currentSectionIndex = 0;
-  
-      const nextButton = document.getElementById('nextButton');
-      const prevButton = document.getElementById('prevButton');
-  
+
+      const nextButton = document.getElementById("nextButton");
+      const prevButton = document.getElementById("prevButton");
+
       // Function to show the current section based on index
       function showSection(index) {
-          sections.forEach((section, i) => {
-              section.classList.toggle('d-none', i !== index);
-          });
-  
-          // Update button states
-          prevButton.disabled = index === 0;
-          nextButton.textContent = index === sections.length - 1 ? 'Submit' : 'Next';
+        sections.forEach((section, i) => {
+          section.classList.toggle("d-none", i !== index);
+        });
+
+        // Update button states
+        prevButton.disabled = index === 0;
+        nextButton.textContent =
+          index === sections.length - 1 ? "Submit" : "Next";
       }
-  
+
       // Next button event
-      nextButton.addEventListener('click', () => {
-          if (currentSectionIndex < sections.length - 1) {
-              currentSectionIndex++;
-              showSection(currentSectionIndex);
-          } else {
-              // Submit the form on the final step
-              alert('Form submitted!');
-          }
+      nextButton.addEventListener("click", () => {
+        if (currentSectionIndex < sections.length - 1) {
+          currentSectionIndex++;
+          showSection(currentSectionIndex);
+        } else {
+          // Submit the form on the final step
+          alert("Form submitted!");
+        }
       });
-  
+
       // Previous button event
-      prevButton.addEventListener('click', () => {
-          if (currentSectionIndex > 0) {
-              currentSectionIndex--;
-              showSection(currentSectionIndex);
-          }
+      prevButton.addEventListener("click", () => {
+        if (currentSectionIndex > 0) {
+          currentSectionIndex--;
+          showSection(currentSectionIndex);
+        }
       });
-  
+
       // Initialize the first section
       showSection(currentSectionIndex);
-  </script>
+    </script>
   </body>
 </html>

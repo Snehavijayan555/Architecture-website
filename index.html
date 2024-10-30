@@ -45,10 +45,23 @@
 
   <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-      <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-      <img class="position-absolute top-50 start-50 translate-middle" src="./img/logo.png" height="50px" width="50px"  alt="Icon">
-  </div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border position-relative text-primary"
+        style="width: 6rem; height: 6rem"
+        role="status"
+      ></div>
+      <img
+        class="position-absolute top-50 start-50 translate-middle"
+        src="./img/logo.png"
+        height="50px"
+        width="50px"
+        alt="Icon"
+      />
+    </div>
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
@@ -103,7 +116,6 @@
             height="40px"
             width="150px"
           />
-        
         </h1>
       </a>
       <button
@@ -115,15 +127,17 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0" style="font-size: 12px;">
+        <div class="navbar-nav ms-auto p-4 p-lg-0" style="font-size: 12px">
           <a href="./index.html" class="nav-item nav-link active">Home</a>
           <a href="./kitchens.html" class="nav-item nav-link">Kitchen</a>
           <a href="./closets.html" class="nav-item nav-link">Closets</a>
           <a href="./tvWall.html" class="nav-item nav-link">TV Wall</a>
           <a href="./kidsRoom.html" class="nav-item nav-link">Kids Room</a>
-          <a href="./vanities.html" class="nav-item nav-link">vanities</a>
-          <a href="./furniture.html" class="nav-item nav-link">Furniture</a>
-          <a href="./service.html" class="nav-item nav-link">Services</a>
+          <a href="./vanities.html" class="nav-item nav-link">Vanities</a>
+          <a href="./furniture.html" class="nav-item nav-link"
+            >Other Furnitures</a
+          >
+          <a href="./service.html" class="nav-item nav-link">Other Services</a>
           <a href="./project.html" class="nav-item nav-link">Portfolio</a>
           <a href="./about.html" class="nav-item nav-link">About</a>
           <!-- <div class="nav-item dropdown">
@@ -149,7 +163,7 @@
               </a>
             </div>
           </div> -->
-          
+
           <!-- <div class="nav-item dropdown">
             <a
               href="./Maintenance.html"
@@ -199,72 +213,15 @@
           </div> -->
           <a href="./contact.html" class="nav-item nav-link">Contact</a>
         </div>
-       
 
-
-<!-- Bootstrap Modal Trigger-->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" >
-  Get Estimate
- </button>
- 
- <!-- Modal Structure -->
- <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-   <div class="modal-dialog">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title" id="contactModalLabel">Get Estimate</h5>
-         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-       </div>
-       <div class="modal-body">
-         <form>
-           <!-- Name Input -->
-           <div class="mb-3">
-             <label for="nameInput" class="form-label">Name</label>
-             <input type="text" class="form-control" id="nameInput" placeholder="Enter your name" required>
-           </div>
- 
-           <!-- Phone Number Input -->
-           <div class="mb-3">
-             <label for="phoneInput" class="form-label">Phone Number</label>
-             <input type="tel" class="form-control" id="phoneInput" placeholder="Enter your phone number" required>
-           </div>
- 
-           <!-- Services Dropdown -->
-           <div class="mb-3">
-            <label for="servicesDropdown" class="form-label">Select Service</label>
-            <select class="form-select" id="servicesDropdown" required>
-              <option value="" disabled selected>Select a service</option>
-              <option value="service1">Kitchen</option>
-               <option value="service2">Closets</option>
-               <option value="service3">TV Wall</option>
-               <option value="service3">Kids Room</option>
-               <option value="service3">Vanities</option>
-               <option value="service3">Furniture</option>
-               <option value="service3">Other</option>
-               </select>
-          </div>
- 
-           <!-- Message Input -->
-           <div class="mb-3">
-             <label for="messageTextarea" class="form-label">Message Details</label>
-             <textarea class="form-control" id="messageTextarea" rows="3" placeholder="Enter your message"></textarea>
-           </div>
- 
-           <!-- File Upload -->
-           <div class="mb-3">
-             <label for="fileUpload" class="form-label">Upload File</label>
-             <input class="form-control" type="file" id="fileUpload">
-           </div>
-         </form>
-       </div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-         <button type="submit" class="btn btn-primary">Submit</button>
-       </div>
-     </div>
-   </div>
- </div>
- 
+        <button
+        type="button"
+        class="btn btn-primary"
+        onclick="copyToClipboard('+0569937768')"
+        data-toggle="tooltip" data-placement="top" title="Click To Copy !"
+      >
+        +0569937768
+      </button>
       </div>
     </nav>
     <!-- Navbar End -->
@@ -522,7 +479,8 @@
                 <img class="mb-4" src="./img/icons/icon-7.png" alt="Icon" />
                 <h3 class="mb-3">TV Wall</h3>
                 <p class="mb-4">
-                  Elevate your entertainment experience with stunning TV wall designs that combine style and function.
+                  Elevate your entertainment experience with stunning TV wall
+                  designs that combine style and function.
                 </p>
                 <a class="btn" href="./tvWall.html"
                   ><i class="fa fa-plus text-primary me-3"></i>Read More</a
@@ -539,7 +497,10 @@
                 <img class="mb-4" src="./img/icons/icon-8.png" alt="Icon" />
                 <h3 class="mb-3">Kids Room</h3>
                 <p class="mb-4">
-                  Transform your child’s space into a world of wonder with playful and imaginative kids' room designs. From nature-inspired themes to cozy bunk setups, every corner is crafted to spark creativity and joy.
+                  Transform your child’s space into a world of wonder with
+                  playful and imaginative kids' room designs. From
+                  nature-inspired themes to cozy bunk setups, every corner is
+                  crafted to spark creativity and joy.
                 </p>
                 <a class="btn" href="./kidsRoom.html"
                   ><i class="fa fa-plus text-primary me-3"></i>Read More</a
@@ -556,7 +517,10 @@
                 <img class="mb-4" src="./img/icons/icon-9.png" alt="Icon" />
                 <h3 class="mb-3">Vanities</h3>
                 <p class="mb-4">
-                  Elevate your bathroom with stunning vanity designs that blend style and practicality. From sleek marble finishes to charming antique pieces, each vanity is crafted to add elegance and functionality.
+                  Elevate your bathroom with stunning vanity designs that blend
+                  style and practicality. From sleek marble finishes to charming
+                  antique pieces, each vanity is crafted to add elegance and
+                  functionality.
                 </p>
                 <a class="btn" href="./vanities.html"
                   ><i class="fa fa-plus text-primary me-3"></i>Read More</a
@@ -573,7 +537,10 @@
                 <img class="mb-4" src="./img/icons/icon-10.png" alt="Icon" />
                 <h3 class="mb-3">Furniture</h3>
                 <p class="mb-4">
-                  Redefine your living spaces with furniture that combines comfort, style, and functionality. From sleek, modern pieces to timeless vintage designs, every item is crafted to enhance the character of your home.
+                  Redefine your living spaces with furniture that combines
+                  comfort, style, and functionality. From sleek, modern pieces
+                  to timeless vintage designs, every item is crafted to enhance
+                  the character of your home.
                 </p>
                 <a class="btn" href="./furniture.html"
                   ><i class="fa fa-plus text-primary me-3"></i>Read More</a
@@ -985,20 +952,41 @@
             </div>
           </div>
 
-
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="row g-3">
               <div class="col-12 col-sm-6">
-                <input type="text" class="form-control" id="userName" placeholder="Your Name" style="height: 55px" />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userName"
+                  placeholder="Your Name"
+                  style="height: 55px"
+                />
               </div>
               <div class="col-12 col-sm-6">
-                <input type="email" class="form-control" id="userEmail" placeholder="Your Email" style="height: 55px" />
+                <input
+                  type="email"
+                  class="form-control"
+                  id="userEmail"
+                  placeholder="Your Email"
+                  style="height: 55px"
+                />
               </div>
               <div class="col-12 col-sm-6">
-                <input type="text" class="form-control" id="userMobile" placeholder="Your Mobile" style="height: 55px" />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userMobile"
+                  placeholder="Your Mobile"
+                  style="height: 55px"
+                />
               </div>
               <div class="col-12 col-sm-6">
-                <select class="form-select" id="userService" style="height: 55px">
+                <select
+                  class="form-select"
+                  id="userService"
+                  style="height: 55px"
+                >
                   <option selected>Choose Service</option>
                   <option value="kitchens">Kitchens</option>
                   <option value="closets">Closets</option>
@@ -1009,17 +997,23 @@
                 </select>
               </div>
               <div class="col-12">
-                <textarea class="form-control" id="userMessage" rows="5" placeholder="Message"></textarea>
+                <textarea
+                  class="form-control"
+                  id="userMessage"
+                  rows="5"
+                  placeholder="Message"
+                ></textarea>
               </div>
               <div class="col-12">
-                <button class="btn btn-primary w-100 py-3" onclick="sendWhatsAppMessage()">
+                <button
+                  class="btn btn-primary w-100 py-3"
+                  onclick="sendWhatsAppMessage()"
+                >
                   Book Appointment
                 </button>
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
     </div>
@@ -1083,88 +1077,95 @@
     </div> -->
     <!-- Testimonial End -->
 
-
     <div class="social-media-sticky">
-      <div class="d-flex justify-content-around social-media-icons"  >
+      <div class="d-flex justify-content-around social-media-icons">
         <div class="icon-block">
-          <a class="btn btn-square btn-outline-body" href="https://wa.me/+971569937768?text=Hi">
+          <a
+            class="btn btn-square btn-outline-body"
+            href="https://wa.me/+971569937768?text=Hi"
+          >
             <i class="fab fa-whatsapp"></i>
           </a>
         </div>
-        <div class="icon-block" >
-          <a class="btn btn-square btn-outline-body"  href="#">
+        <div class="icon-block">
+          <a class="btn btn-square btn-outline-body" href="#">
             <i class="fa fa-phone-alt"></i>
           </a>
         </div>
         <div class="icon-block">
-          <a class="btn btn-square btn-outline-body"  href="#">
+          <a class="btn btn-square btn-outline-body" href="#">
             <i class="fab fa-instagram"></i>
           </a>
         </div>
         <div class="icon-block">
-          <a class="btn btn-square btn-outline-body"  href="#">
+          <a class="btn btn-square btn-outline-body" href="#">
             <i class="fa fa-envelope"></i>
           </a>
         </div>
       </div>
     </div>
-    
-
-
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer  px-0 wow fadeIn" data-wow-delay="0.1s">
-
-
+    <div
+      class="container-fluid bg-dark text-body footer px-0 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
       <div class="container py-3">
         <div class="row g-3">
-          
-    
           <div class="d-flex justify-content-between copyright">
-  
             <div class="col-lg-3 col-md-6">
               <h3 class="text-light mb-4">Services</h3>
-            <a class="btn btn-link" href="./kitchens.html">Kitchens</a>
-            <a class="btn btn-link" href="./closets.html">Closets</a>
-            <a class="btn btn-link" href="./entertainment.html">Entertainment </a>
-            <a class="btn btn-link" href="./wallcladding.html">Wall Cladding</a>
-            <a class="btn btn-link" href="./Maintenance.html">Maintenance</a>
-            <a class="btn btn-link" href="./InteriorDesign.html">Interior</a>
+              <a class="btn btn-link" href="./kitchens.html">Kitchens</a>
+              <a class="btn btn-link" href="./closets.html">Closets</a>
+              <a class="btn btn-link" href="./entertainment.html"
+                >Entertainment
+              </a>
+              <a class="btn btn-link" href="./wallcladding.html"
+                >Wall Cladding</a
+              >
+              <a class="btn btn-link" href="./Maintenance.html">Maintenance</a>
+              <a class="btn btn-link" href="./InteriorDesign.html">Interior</a>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <h3 class="text-light mb-4">Quick Links</h3>
+              <a class="btn btn-link" href="./about.html">About Us</a>
+              <a class="btn btn-link" href="./contact.html">Contact </a>
+              <a class="btn btn-link" href="./service.html">Services</a>
+              <a class="btn btn-link" href="./contact.html">Support</a>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <a href="./index.html" class="ms-4 ms-lg-0">
+                <img
+                  class="me-3"
+                  src="./img/fullLogo.png"
+                  alt="Icon"
+                  height="120px"
+                  width="300px"
+                />
+              </a>
+            </div>
           </div>
-          
-          <div class="col-lg-3 col-md-6">
-            <h3 class="text-light mb-4">Quick Links</h3>
-            <a class="btn btn-link" href="./about.html">About Us</a>
-            <a class="btn btn-link" href="./contact.html">Contact </a>
-            <a class="btn btn-link" href="./service.html">Services</a>
-            <a class="btn btn-link" href="./contact.html">Support</a>
+
+          <div class="col-lg-12 col-md-12 text-center">
+            <h3 class="text-light mb-2">Address</h3>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt text-primary me-3"></i>
+              Showroom 220, Al Asmawi Building, Umm Al Sheif,Sheikh Zayed Road,
+              Dubai
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt text-primary me-3"></i>+0569937768
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope text-primary me-3"></i
+              >marsinteriors@gmail.com
+            </p>
           </div>
-    
-          <div class="col-lg-3 col-md-6">
-            <a href="./index.html" class="ms-4 ms-lg-0">
-              <img class="me-3" src="./img/fullLogo.png" alt="Icon" height="120px" width="300px" />
-            </a>
-          </div>
-        </div>
-  
-        <div class="col-lg-12 col-md-12 text-center">
-          <h3 class="text-light mb-2">Address</h3>
-          <p class="mb-2">
-            <i class="fa fa-map-marker-alt text-primary me-3"></i>
-            Showroom 220, Al Asmawi Building, Umm Al Sheif,Sheikh Zayed Road, Dubai
-          </p>
-          <p class="mb-2">
-            <i class="fa fa-phone-alt text-primary me-3"></i>+0569937768
-          </p>
-          <p class="mb-2">
-            <i class="fa fa-envelope text-primary me-3"></i>marsinteriors@gmail.com
-          </p>
-        </div>
-          
-          
         </div>
       </div>
-      
+
       <div class="container-fluid copyright">
         <div class="container">
           <div class="row">
@@ -1180,17 +1181,10 @@
     </div>
     <!-- Footer End -->
 
-       
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
       ><i class="bi bi-arrow-up"></i
     ></a>
-
-   
-
-
-    
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -1209,33 +1203,87 @@
     <script src="./js/excel.js"></script>
     <script src="./js/whatsapp.js"></script>
 
-<!-- JavaScript -->
-<script>
-  function sendWhatsAppMessage() {
-    // Get input values
-    const name = document.getElementById('userName').value;
-    const email = document.getElementById('userEmail').value;
-    const mobile = document.getElementById('userMobile').value;
-    const service = document.getElementById('userService').value;
-    const message = document.getElementById('userMessage').value;
+    <!-- JavaScript -->
+    <script>
+      function sendWhatsAppMessage() {
+        // Get input values
+        const name = document.getElementById("userName").value;
+        const email = document.getElementById("userEmail").value;
+        const mobile = document.getElementById("userMobile").value;
+        const service = document.getElementById("userService").value;
+        const message = document.getElementById("userMessage").value;
 
-    // Construct WhatsApp message
-    const whatsappMessage = `Hi, I would like to book an appointment.
+        // Construct WhatsApp message
+        const whatsappMessage = `Hi, I would like to book an appointment.
     Name: ${name}
     Email: ${email}
     Mobile: ${mobile}
     Service: ${service}
     Message: ${message}`;
 
-    // Replace spaces with '+' and encode other special characters
-    const formattedMessage = whatsappMessage.replace(/\s+/g, '+');
+        // Replace spaces with '+' and encode other special characters
+        const formattedMessage = whatsappMessage.replace(/\s+/g, "+");
 
-    // Create WhatsApp URL with the formatted message
-    const whatsappURL = `https://wa.me/+971569937768?text=${formattedMessage}`;
+        // Create WhatsApp URL with the formatted message
+        const whatsappURL = `https://wa.me/+971569937768?text=${formattedMessage}`;
 
-    // Open WhatsApp with the message
-    window.open(whatsappURL, '_blank');
-  }
-</script>
+        // Open WhatsApp with the message
+        window.open(whatsappURL, "_blank");
+      }
+    </script>
+
+    <script>
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(
+          () => {
+            console.log("Phone Number Copied!");
+          },
+          (err) => {
+            console.error("Failed to copy: ", err);
+          }
+        );
+      }
+    </script>
+    <script>
+      const sections = document.querySelectorAll(".form-section");
+      let currentSectionIndex = 0;
+
+      const nextButton = document.getElementById("nextButton");
+      const prevButton = document.getElementById("prevButton");
+
+      // Function to show the current section based on index
+      function showSection(index) {
+        sections.forEach((section, i) => {
+          section.classList.toggle("d-none", i !== index);
+        });
+
+        // Update button states
+        prevButton.disabled = index === 0;
+        nextButton.textContent =
+          index === sections.length - 1 ? "Submit" : "Next";
+      }
+
+      // Next button event
+      nextButton.addEventListener("click", () => {
+        if (currentSectionIndex < sections.length - 1) {
+          currentSectionIndex++;
+          showSection(currentSectionIndex);
+        } else {
+          // Submit the form on the final step
+          alert("Form submitted!");
+        }
+      });
+
+      // Previous button event
+      prevButton.addEventListener("click", () => {
+        if (currentSectionIndex > 0) {
+          currentSectionIndex--;
+          showSection(currentSectionIndex);
+        }
+      });
+
+      // Initialize the first section
+      showSection(currentSectionIndex);
+    </script>
   </body>
 </html>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Mars Interiors</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -28,7 +27,10 @@
 
     <!-- Libraries Stylesheet -->
     <link href="./lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="./lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="./lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
     <link
       href="./lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
       rel="stylesheet"
@@ -39,454 +41,394 @@
 
     <!-- Template Stylesheet -->
     <link href="./css/style.css" rel="stylesheet" />
-  </head>
 
-  <style>
-    @supports (position: absolute) {
-      #hotspots-container {
-        display: block !important;
-        max-height: none !important;
+    <style>
+      @supports (position: absolute) {
+        #hotspots-container {
+          display: block !important;
+          max-height: none !important;
+        }
+
+        #fallback {
+          display: none;
+        }
+      }
+    </style>
+
+    <style>
+      /* Kitchen text styling */
+      .image-text {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+      .highlight {
+        font-weight: bold;
+        display: inline-block;
+        background: #ffffff;
+        color: #193549;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        animation: pulse 1.5s infinite;
+        cursor: pointer;
       }
 
-      #fallback {
+      .highlight:hover {
+        background: #ece0e0;
+        color: #000000;
+      }
+
+      .hotspot-content {
+        position: absolute;
+        width: 40%;
+        left: 10%;
+        display: none;
+        padding: 1.5rem;
+        text-align: center;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Position content above respective labels */
+      #b1:hover ~ #content1 {
+        display: block;
+        bottom: 80%; /* Content above label 1 */
+        left: 50%;
+      }
+
+      #b2:hover ~ #content2 {
+        display: block;
+        bottom: 64%; /* Content above label 2 */
+      }
+
+      #b3:hover ~ #content3 {
+        display: block;
+        left: 55%;
+        bottom: 37%; /* Content above label 3 */
+      }
+
+      #b4:hover ~ #content4 {
+        display: block;
+        bottom: 37%; /* Content above label 3 */
+      }
+
+      #b5:hover ~ #content5 {
+        display: block;
+        left: 5%;
+        bottom: 37%; /* Content above label 3 */
+      }
+
+      /* Adjust positions for labels */
+      #b1 {
+        left: 73%;
+        top: 22%;
+      }
+
+      #b2 {
+        left: 24%;
+        top: 38%;
+      }
+
+      #b3 {
+        left: 67%;
+        top: 64%;
+      }
+
+      #b4 {
+        left: 25%;
+        top: 64%;
+      }
+
+      #b5 {
+        left: 46%;
+        top: 47%;
+      }
+
+      .hidden {
         display: none;
       }
-    }
-  </style>
 
-  <style>
-    /* Kitchen text styling */
-    .image-text {
-      position: absolute;
-      top: 5%;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 2rem;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .highlight {
-      font-weight: bold;
-      display: inline-block;
-      background: #ffffff;
-      color: #193549;
-      font-size: 1.2rem;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      animation: pulse 1.5s infinite;
-      cursor: pointer;
-    }
-
-    .highlight:hover {
-      background: #ece0e0;
-      color: #000000;
-    }
-
-    #content1 {
-      bottom: 85%; /* Content above label 1 */
-      left: 55%; /* Align closer to hotspot 1 */
-    }
-
-    #content2 {
-      bottom: 69%; /* Content above label 2 */
-      left: 8%; /* Align closer to hotspot 2 */
-    }
-
-    #content3 {
-      bottom: 42%; /* Content above label 3 */
-      left: 57%; /* Align closer to hotspot 3 */
-    }
-
-    #content4 {
-      bottom: 42%; /* Content above label 3 */
-      left: 15%; /* Align closer to hotspot 3 */
-    }
-
-    #content5 {
-      bottom: 65%; /* Content above label 3 */
-      left: 36%; /* Align closer to hotspot 3 */
-    }
-
-    /* Content appears above each hotspot */
-    .hotspot-content {
-      position: absolute;
-      width: 40%; /* Adjust size */
-      left: 10%; /* Align within container */
-      display: none;
-      padding: 1.5rem;
-      text-align: center;
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Position content above respective labels */
-    #b1:hover ~ #content1 {
-      display: block;
-      bottom: 80%; /* Content above label 1 */
-    }
-
-    #b2:hover ~ #content2 {
-      display: block;
-      bottom: 64%; /* Content above label 2 */
-    }
-
-    #b3:hover ~ #content3 {
-      display: block;
-      bottom: 37%; /* Content above label 3 */
-    }
-
-    #b4:hover ~ #content4 {
-      display: block;
-      bottom: 37%; /* Content above label 3 */
-    }
-
-    #b5:hover ~ #content5 {
-      display: block;
-      bottom: 37%; /* Content above label 3 */
-    }
-
-    /* Adjust positions for labels */
-    #b1 {
-      left: 73%;
-      top: 22%;
-    }
-
-    #b2 {
-      left: 24%;
-      top: 38%;
-    }
-
-    #b3 {
-      left: 67%;
-      top: 64%;
-    }
-
-    #b4 {
-      left: 25%;
-      top: 64%;
-    }
-
-    #b5 {
-      left: 46%;
-      top: 47%;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .text-grey {
-      color: #193549;
-    }
-
-    .rounded {
-      border-radius: 4px;
-    }
-
-    .shadow {
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    }
-
-    .bg-white {
-      background: #000000;
-    }
-
-    .absolute {
-      position: absolute;
-    }
-
-    #hotspots1:checked ~ #content1,
-    #hotspots2:checked ~ #content2,
-    #hotspots3:checked ~ #content3,
-    #hotspots4:checked ~ #content4,
-    #hotspots5:checked ~ #content5 {
-      display: block;
-      margin: 2rem;
-      width: 90%;
-    }
-    @keyframes pulse {
-      from {
-        box-shadow: 0 0 0 0px #5f5f5f;
+      .text-grey {
+        color: #193549;
       }
-      to {
-        box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
-      }
-    }
 
-    .text-outline {
-      position: absolute;
-      bottom: 20px; /* Adjust as needed */
-      left: 50%;
-      transform: translateX(-50%); /* Center horizontally */
-      font-size: 3rem; /* Adjust font size as needed */
-      text-align: center;
-      font-family: DmSans-Heading;
-      color: #c29e7c; /* Set text color to transparent */
-      -webkit-background-clip: text; /* For Safari */
-      background-clip: text; /* For other browsers */
-      background-image: linear-gradient(white, white); /* White gradient */
-      text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
-        1px 1px 0 #ffffff; /* White outline effect */
-    }
-  </style>
-  <style>
-    .selectable-item {
+      .rounded {
+        border-radius: 4px;
+      }
+
+      .shadow {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      }
+
+      .bg-white {
+        background: #000000;
+      }
+
+      .absolute {
+        position: absolute;
+      }
+
+      #hotspots1:checked ~ #content1,
+      #hotspots2:checked ~ #content2,
+      #hotspots3:checked ~ #content3,
+      #hotspots4:checked ~ #content4,
+      #hotspots5:checked ~ #content5 {
+        display: block;
+        margin: 2rem;
+        width: 90%;
+      }
+      @keyframes pulse {
+        from {
+          box-shadow: 0 0 0 0px #5f5f5f;
+        }
+        to {
+          box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+        }
+      }
+
+      .text-outline {
+        position: absolute;
+        bottom: 20px; /* Adjust as needed */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        font-size: 3rem; /* Adjust font size as needed */
+        text-align: center;
+        font-family: DmSans-Heading;
+        color: #c29e7c; /* Set text color to transparent */
+        -webkit-background-clip: text; /* For Safari */
+        background-clip: text; /* For other browsers */
+        background-image: linear-gradient(white, white); /* White gradient */
+        text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+          1px 1px 0 #ffffff; /* White outline effect */
+      }
+
+      @media (max-width: 1024px) {
+        .image-text {
+          font-size: 1.8rem;
+        }
+
+        .highlight {
+          font-size: 1rem;
+          padding: 0.3rem 0.6rem;
+        }
+
+        .hotspot-content {
+          width: 60%;
+          padding: 1rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .image-text {
+          font-size: 1.5rem;
+        }
+
+        .highlight {
+          font-size: 0.9rem;
+          padding: 0.2rem 0.5rem;
+        }
+
+        .hotspot-content {
+          width: 80%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .image-text {
+          font-size: 1.2rem;
+        }
+
+        .highlight {
+          font-size: 0.8rem;
+          padding: 0.1rem 0.4rem;
+        }
+
+        .hotspot-content {
+          width: 90%;
+        }
+      }
+
+      /* Adjust Label Positions Responsively */
+      @media (max-width: 768px) {
+        #b1 {
+          left: 65%;
+          top: 20%;
+        }
+
+        #b2 {
+          left: 18%;
+          top: 35%;
+        }
+
+        #b4 {
+          top: 55%;
+        }
+
+        #b3 {
+          top: 35%;
+          left: 60%;
+        }
+
+        #b4 {
+          left: 20%;
+        }
+
+        #b5 {
+          top: 75%;
+          left: 40%;
+        }
+      }
+    </style>
+    <style>
+      .selectable-item {
         cursor: pointer;
         padding: 10px;
         border: 2px solid transparent;
         transition: border-color 0.3s;
-    }
+      }
 
-    input:checked + .selectable-item {
-        border-color: #C29E7C;
-    }
+      input:checked + .selectable-item {
+        border-color: #c29e7c;
+      }
 
-    .form-section {
+      .form-section {
         margin-bottom: 30px;
-    }
+      }
 
-    .d-flex {
+      .d-flex {
         justify-content: center;
-    }
-</style>
-</head>
+      }
 
+      .project-card {
+        max-width: 355px;
+        overflow: hidden;
+      }
 
+      .img-container {
+        width: 100%;
+        height: 418px;
+        overflow: hidden;
+        border-radius: 8px; /* Optional rounded corners */
+        transition: transform 0.5s ease-in-out;
+      }
 
-<body>
+      .project-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .img-container:hover .project-img {
+        transform: scale(1.1); /* Zoom-in effect */
+      }
+    </style>
+  </head>
+
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-        <img class="position-absolute top-50 start-50 translate-middle" src="./img/logo.png" height="50px" width="50px"  alt="Icon">
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border position-relative text-primary"
+        style="width: 6rem; height: 6rem"
+        role="status"
+      ></div>
+      <img
+        class="position-absolute top-50 start-50 translate-middle"
+        src="./img/logo.png"
+        height="50px"
+        width="50px"
+        alt="Icon"
+      />
     </div>
     <!-- Spinner End -->
 
-
-    <!-- Topbar Start -->
-    <!-- <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-3">
-                    <a class="text-body px-2" href="tel:+0123456789"><i class="fa fa-phone-alt text-primary me-2"></i>+012 345 6789</a>
-                    <a class="text-body px-2" href="mailto:info@example.com"><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</a>
-                </div>
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-2">
-                    <a class="text-body px-2" href="">Terms</a>
-                    <a class="text-body px-2" href="">Privacy</a>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Topbar End -->
-
-
     <!-- Navbar Start -->
     <nav
-    class="navbar navbar-expand-lg bg-dark navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn"
-    data-wow-delay="0.1s"
-  >
-  <a href="./index.html" class="navbar-brand ms-4 ms-lg-0">
-    <h1 class="text-primary m-0" style="font-size: 20px">
-      <img
-        class="me-3"
-        src="./img/newLogo.png"
-        alt="Icon"
-        height="40px"
-        width="150px"
-      />
-    
-    </h1>
-  </a>
-    <button
-      type="button"
-      class="navbar-toggler me-4"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarCollapse"
+      class="navbar navbar-expand-lg bg-dark navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn"
+      data-wow-delay="0.1s"
     >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav ms-auto p-4 p-lg-0" style="font-size: 12px;">
-        <a href="./index.html" class="nav-item nav-link ">Home</a>
-        <a href="./kitchens.html" class="nav-item nav-link">Kitchen</a>
-        <a href="./closets.html" class="nav-item nav-link">Closets</a>
-        <a href="./tvWall.html" class="nav-item nav-link active">TV Wall</a>
-        <a href="./kidsRoom.html" class="nav-item nav-link">Kids Room</a>
-        <a href="./vanities.html" class="nav-item nav-link">vanities</a>
-        <a href="./furniture.html" class="nav-item nav-link">Furniture</a>
-        <a href="./service.html" class="nav-item nav-link">Services</a>
-        <a href="./project.html" class="nav-item nav-link">Portfolio</a>
-        <a href="./about.html" class="nav-item nav-link">About</a>
-        <!-- <div class="nav-item dropdown">
-          <a href="./service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-            Services
-          </a>
-          <div class="dropdown-menu border-0 m-0">
-            <a href="./kitchens.html" class="dropdown-item">
-              <img src="./img/icons/kitchenicon.svg" alt="Kitchen Icon" class="me-2" width="20" />
-              Kitchens
-            </a>
-            <a href="./closets.html" class="dropdown-item">
-              <img src="./img/icons/closeticon.svg" alt="Closet Icon" class="me-2" width="20" />
-              Closets
-            </a>
-            <a href="./entertainment.html" class="dropdown-item">
-              <img src="./img/icons/swimmingicon.svg" alt="Entertainment Icon" class="me-2" width="20" />
-              Entertainment Area
-            </a>
-            <a href="./wallcladding.html" class="dropdown-item">
-              <img src="./img/icons/wallcladdingicon.svg" alt="Wall Cladding Icon" class="me-2" width="20" />
-              Wall Cladding
-            </a>
-          </div>
-        </div> -->
-        
-        <!-- <div class="nav-item dropdown">
-          <a
-            href="./Maintenance.html"
-            class="nav-link dropdown-toggle"
-            data-bs-toggle="dropdown"
-            >Maintenance</a
+      <a href="./index.html" class="navbar-brand ms-4 ms-lg-0">
+        <h1 class="text-primary m-0" style="font-size: 20px">
+          <img
+            class="me-3"
+            src="./img/newLogo.png"
+            alt="Icon"
+            height="40px"
+            width="150px"
+          />
+        </h1>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0" style="font-size: 12px">
+          <a href="./index.html" class="nav-item nav-link">Home</a>
+          <a href="./kitchens.html" class="nav-item nav-link">Kitchen</a>
+          <a href="./closets.html" class="nav-item nav-link">Closets</a>
+          <a href="./tvWall.html" class="nav-item nav-link active">TV Wall</a>
+          <a href="./kidsRoom.html" class="nav-item nav-link">Kids Room</a>
+          <a href="./vanities.html" class="nav-item nav-link">vanities</a>
+          <a href="./furniture.html" class="nav-item nav-link"
+            >Other Furnitures</a
           >
-          <div class="dropdown-menu border-0 m-0">
-            <a href="./Maintenance.html" class="dropdown-item">
-              <img src="./img/icons/amccontracticon.svg" alt="AmcIcon" class="me-2" width="20" />
-              AMC Contracts</a
-            >
-            <a href="./Maintenance.html" class="dropdown-item"
-              ><img src="./img/icons/interioricon.svg" alt="Interior Icon" class="me-2" width="20" />
-              Interior Renovations</a
-            >
-            <a href="./Maintenance.html" class="dropdown-item"
-              ><img src="./img/icons/turnkeyicon.svg" alt="turnkey Icon" class="me-2" width="20" />
-              Turnkey Renovations</a
-            >
-            <a href="./Maintenance.html" class="dropdown-item"
-              ><img src="./img/icons/homeimprovements.svg" alt="homeimprovements" class="me-2" width="20" /> Home Improvements</a
-            >
-          </div>
-        </div> -->
-        <!-- <div class="nav-item dropdown">
-          <a
-            href="./InteriorDesign.html"
-            class="nav-link dropdown-toggle"
-            data-bs-toggle="dropdown"
-            >Interior Design</a
-          >
-          <div class="dropdown-menu border-0 m-0">
-            <a href="./InteriorDesign.html" class="dropdown-item"
-              ><img src="./img/icons/conceptdesignicon.svg" alt="conceptDesign" class="me-2" width="20" />Concept Design Planning</a
-            >
-            <a href="./InteriorDesign.html" class="dropdown-item"
-              ><img src="./img/icons/fullinterioricon.svg" alt="fullInterior icon" class="me-2" width="20" />Full Interior Design</a
-            >
-            <a href="./InteriorDesign.html" class="dropdown-item"
-              ><img src="./img/icons/3dicon.svg" alt="3d icon" class="me-2" width="20" />3D Designs</a
-            >
-            <a href="./InteriorDesign.html" class="dropdown-item"
-              ><img src="./img/icons/interiorfurnitoricon.svg" alt="interiorfurnitoricon" class="me-2" width="20" />Interior Furniture</a
-            >
-          </div>
-        </div> -->
-        <a href="./contact.html" class="nav-item nav-link">Contact</a>
+          <a href="./service.html" class="nav-item nav-link">Other Services</a>
+          <a href="./project.html" class="nav-item nav-link">Portfolio</a>
+          <a href="./about.html" class="nav-item nav-link">About</a>
+          <a href="./contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="copyToClipboard('+0569937768')"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Click To Copy !"
+        >
+          +0569937768
+        </button>
       </div>
-     
-
-
-<!-- Bootstrap Modal Trigger-->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" >
-Get Estimate
-</button>
-
-<!-- Modal Structure -->
-<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
- <div class="modal-dialog">
-   <div class="modal-content">
-     <div class="modal-header">
-       <h5 class="modal-title" id="contactModalLabel">Get Estimate</h5>
-       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-     </div>
-     <div class="modal-body">
-       <form>
-         <!-- Name Input -->
-         <div class="mb-3">
-           <label for="nameInput" class="form-label">Name</label>
-           <input type="text" class="form-control" id="nameInput" placeholder="Enter your name" required>
-         </div>
-
-         <!-- Phone Number Input -->
-         <div class="mb-3">
-           <label for="phoneInput" class="form-label">Phone Number</label>
-           <input type="tel" class="form-control" id="phoneInput" placeholder="Enter your phone number" required>
-         </div>
-
-         <!-- Services Dropdown -->
-         <div class="mb-3">
-           <label for="servicesDropdown" class="form-label">Select Service</label>
-           <select class="form-select" id="servicesDropdown" required>
-             <option value="" disabled selected>Select a service</option>
-             <option value="service1">Kitchen</option>
-              <option value="service2">Closets</option>
-              <option value="service3">TV Wall</option>
-              <option value="service3">Kids Room</option>
-              <option value="service3">Vanities</option>
-              <option value="service3">Furniture</option>
-              <option value="service3">Other</option>
-              </select>
-         </div>
-
-         <!-- Message Input -->
-         <div class="mb-3">
-           <label for="messageTextarea" class="form-label">Message Details</label>
-           <textarea class="form-control" id="messageTextarea" rows="3" placeholder="Enter your message"></textarea>
-         </div>
-
-         <!-- File Upload -->
-         <div class="mb-3">
-           <label for="fileUpload" class="form-label">Upload File</label>
-           <input class="form-control" type="file" id="fileUpload">
-         </div>
-       </form>
-     </div>
-     <div class="modal-footer">
-       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-       <button type="submit" class="btn btn-primary">Submit</button>
-     </div>
-   </div>
- </div>
-</div>
-
-    </div>
-  </nav>
+    </nav>
     <!-- Navbar End -->
 
-
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <h1 class="display-1 text-white animated slideInDown">TV Wall</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">TV Wall</li>
-                </ol>
-            </nav>
-        </div>
+    <div
+      class="container-fluid page-header py-5 mb-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <h1 class="display-1 text-white animated slideInDown">TV Wall</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb text-uppercase mb-0">
+            <li class="breadcrumb-item">
+              <a class="text-white" href="./index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item text-primary active" aria-current="page">
+              TV Wall
+            </li>
+          </ol>
+        </nav>
+      </div>
     </div>
     <!-- Page Header End -->
-
 
     <!-- Project Start -->
     <div class="container-xxl project py-5">
@@ -498,12 +440,13 @@ Get Estimate
                 30 Years Of Experience In Architecture Industry
               </h1>
               <p class="mb-4">
-                Inspired by the Nordic style, Scandinavian kitchens embrace
-                warmth, simplicity, and functionality. Expect light color
-                palettes, natural materials like wood, and plenty of open
-                spaces. With an emphasis on coziness and minimalism, these
-                kitchens are designed to bring in natural light and create a
-                welcoming, airy feel.
+                TV wall designs blend aesthetics with functionality, tailored to
+                complement various interior styles. Modern TV walls feature
+                sleek panels, minimal shelving, and concealed wiring for a
+                clean, streamlined look. Industrial designs incorporate raw
+                materials like exposed bricks, metal frames, and wood accents
+                for an edgy, urban vibe. Traditional styles offer elegance with
+                ornate moldings, rich wood cabinets, and built-in storage.
               </p>
               <button type="button" class="btn btn-primary">Contact Us</button>
             </div>
@@ -511,11 +454,11 @@ Get Estimate
               <div class="position-relative h-100">
                 <img
                   class="position-absolute img-fluid w-100 h-100"
-                  src="./img/kitchen-2.jpg"
+                  src="./img/tvwall1.jpg"
                   style="object-fit: cover"
                   alt=""
                 />
-                <h2 class="text-outline">KITCHEN</h2>
+                <h2 class="text-outline">TV WALL</h2>
                 <!-- Text overlay -->
               </div>
             </div>
@@ -566,16 +509,16 @@ Get Estimate
 
       <!-- Carousel Start -->
       <div
-        class="container-fluid p-0 pb-5 wow fadeIn d-flex"
+        class="container-fluid p-0 pb-5 wow fadeIn d-flex flex-wrap"
         data-wow-delay="0.1s"
       >
         <div class="col-md-4 p-3">
           <h4 class="section-title">Our Projects</h4>
-          <h3 class="display-5 mb-4">Explore our kitchen designs</h3>
+          <h3 class="display-5 mb-4">Explore our tv wall designs</h3>
           <p class="mb-4">
-            Our contemporary kitchen designs are all about sleek lines, modern
+            Our contemporary tv wall designs are all about sleek lines, modern
             aesthetics, and high functionality. With a focus on minimal clutter
-            and cutting-edge appliances, these kitchens incorporate clean
+            and cutting-edge appliances, these tv wall incorporate clean
             surfaces, bold accents, and innovative storage solutions.
           </p>
           <button type="button" class="btn btn-primary">Contact Us</button>
@@ -587,7 +530,7 @@ Get Estimate
           >
             <img
               class="img-fluid"
-              src="./img/carousel-1.jpg"
+              src="./img/tvwall1.jpg"
               alt=""
               style="height: 400px"
             />
@@ -598,7 +541,7 @@ Get Estimate
           >
             <img
               class="img-fluid"
-              src="./img/carousel-2.jpg"
+              src="./img/tvwall2.jpg"
               alt=""
               style="height: 400px"
             />
@@ -609,7 +552,7 @@ Get Estimate
           >
             <img
               class="img-fluid"
-              src="./img/carousel-3.jpg"
+              src="./img/tvwall3.webp"
               alt=""
               style="height: 400px"
             />
@@ -620,15 +563,15 @@ Get Estimate
 
       <!-- Carousel Start -->
       <div
-        class="container-fluid p-0 pb-5 wow fadeIn d-flex"
+        class="container-fluid p-0 pb-5 wow fadeIn d-flex flex-wrap"
         data-wow-delay="0.1s"
       >
-        <div>
+        <div class="col-md-6">
           <div class="d-flex">
             <div class="p-3">
               <img
                 class="img-fluid"
-                src="./img/carousel-3.jpg"
+                src="./img/tvwall1.jpg"
                 alt=""
                 style="height: 200px"
               />
@@ -636,7 +579,7 @@ Get Estimate
             <div class="p-3">
               <img
                 class="img-fluid"
-                src="./img/carousel-3.jpg"
+                src="./img/tvwall2.jpg"
                 alt=""
                 style="height: 200px"
               />
@@ -646,7 +589,7 @@ Get Estimate
             <div class="p-3">
               <img
                 class="img-fluid"
-                src="./img/carousel-3.jpg"
+                src="./img/tvwall3.webp"
                 alt=""
                 style="height: 200px"
               />
@@ -654,7 +597,7 @@ Get Estimate
             <div class="p-3">
               <img
                 class="img-fluid"
-                src="./img/carousel-3.jpg"
+                src="./img/tvwall4.webp"
                 alt=""
                 style="height: 200px"
               />
@@ -664,9 +607,9 @@ Get Estimate
 
         <div class="col-md-6 p-3">
           <h6 class="section-title">Our Projects</h6>
-          <h4 class="display-5 mb-4">Explore our kitchen designs</h4>
+          <h4 class="display-5 mb-4">Explore our Tv Wall designs</h4>
           <p class="mb-4">
-            Our contemporary kitchen designs are all about sleek lines, modern
+            Our contemporary tv wall designs are all about sleek lines, modern
             aesthetics, and high functionality.
           </p>
           <p><span class="fas fa-check">Corner cabinet fitting</span></p>
@@ -678,132 +621,14 @@ Get Estimate
         </div>
       </div>
       <!-- Carousel End -->
-
-      <!-- <div class="container">
-        <div
-          class="text-center mx-auto mb-5 wow fadeInUp"
-          data-wow-delay="0.1s"
-          style="max-width: 600px"
-        >
-          <h4 class="section-title">Our Projects</h4>
-          <h1 class="display-5 mb-4">
-            Visit Our Latest Projects And Our Innovative Works
-          </h1>
-        </div>
-        <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="col-lg-4">
-            <div
-              class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4"
-            >
-              <button
-                class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active"
-                data-bs-toggle="pill"
-                data-bs-target="#tab-pane-1"
-                type="button"
-              >
-                <h3 class="m-0">01. Contemporary</h3>
-              </button>
-              <button
-                class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
-                data-bs-toggle="pill"
-                data-bs-target="#tab-pane-2"
-                type="button"
-              >
-                <h3 class="m-0">02. Scandinavian</h3>
-              </button>
-              <button
-                class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
-                data-bs-toggle="pill"
-                data-bs-target="#tab-pane-3"
-                type="button"
-              >
-                <h3 class="m-0">03. Farmhouse</h3>
-              </button>
-              <button
-                class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0"
-                data-bs-toggle="pill"
-                data-bs-target="#tab-pane-4"
-                type="button"
-              >
-                <h3 class="m-0">04. Island</h3>
-              </button>
-            </div>
-          </div>
-          <div class="col-lg-8">
-            <div class="tab-content w-100">
-              <div class="tab-pane fade show active" id="tab-pane-1">
-                <div class="row g-4">
-                  <div class="col-md-12" style="min-height: 350px">
-                    <div class="position-relative h-100">
-                      <img
-                        class="position-absolute img-fluid w-100 h-100"
-                        src="./img/kitchen-1.jpg"
-                        style="object-fit: cover"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="tab-pane fade" id="tab-pane-2">
-                <div class="row g-4">
-                  <div class="col-md-12" style="min-height: 350px">
-                    <div class="position-relative h-100">
-                      <img
-                        class="position-absolute img-fluid w-100 h-100"
-                        src="./img/kitchen-2.jpg"
-                        style="object-fit: cover"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                 
-                </div>
-              </div>
-              <div class="tab-pane fade" id="tab-pane-3">
-                <div class="row g-4">
-                  <div class="col-md-12" style="min-height: 350px">
-                    <div class="position-relative h-100">
-                      <img
-                        class="position-absolute img-fluid w-100 h-100"
-                        src="./img/kitchen-3.jpg"
-                        style="object-fit: cover"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                 
-                </div>
-              </div>
-              <div class="tab-pane fade" id="tab-pane-4">
-                <div class="row g-4">
-                  <div class="col-md-12" style="min-height: 350px">
-                    <div class="position-relative h-100">
-                      <img
-                        class="position-absolute img-fluid w-100 h-100"
-                        src="./img/kitchen-4.jpg"
-                        style="object-fit: cover"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
-    <!-- Project End -->
 
     <div class="container-fluid">
       <div
         id="hotspots-container"
         class="hidden w-90 mw-1200 mx-auto rounded shadow text-center"
         style="
-          background: url(/img/carousel-3.jpg) center / cover no-repeat;
+          background: url(/img/tvwall2.jpg) center / cover no-repeat;
           display: none;
           max-height: 0;
           overflow: hidden;
@@ -815,24 +640,24 @@ Get Estimate
           class="text-center"
         >
           <!-- Text on Top Center -->
-          <div class="image-text">5 ELEMENTS OF A GREAT KITCHEN</div>
+          <div class="image-text">5 ELEMENTS OF A GREAT TV WALL</div>
           <!-- Hotspot Labels -->
           <label for="hotspots1" id="b1" class="highlight absolute py-1 px-4"
-            >Facades</label
+            >Ergonomics</label
           >
           <label for="hotspots2" id="b2" class="highlight absolute py-1 px-4"
-            >Worktop</label
+            >Case</label
           >
           <label for="hotspots3" id="b3" class="highlight absolute py-1 px-4"
-            >Excellence in Workmanship</label
+            >Smart System</label
           >
 
           <label for="hotspots4" id="b4" class="highlight absolute py-1 px-4"
-            >Excellence in Workmanship</label
+            >Facades</label
           >
 
           <label for="hotspots5" id="b5" class="highlight absolute py-1 px-4"
-            >Excellence in Workmanship</label
+            >Professional Team</label
           >
 
           <!-- Content for Each Hotspot -->
@@ -882,6 +707,7 @@ Get Estimate
       <div id="fallback" class="text-center bold text-m"></div>
     </div>
 
+
     <div class="container my-5">
       <div
         class="text-center mx-auto mb-5 wow fadeInUp"
@@ -893,10 +719,13 @@ Get Estimate
           Visit Our Latest Projects And Our Innovative Works
         </h1>
       </div>
+    
       <div>
-        <div class="d-flex gap-5">
-          <div class="text-center">
-            <img src="./img/service-1.jpg" alt="" width="355" height="418px" />
+        <div class="d-flex gap-5 flex-wrap justify-content-center">
+          <div class="text-center col-md-6 col-12 project-card">
+            <div class="img-container">
+              <img src="./img/tvwall-10.jpg" alt="" class="project-img" />
+            </div>
             <div class="p-4">
               <h6 class="fw-bold">MODERN LUXURY</h6>
               <p>
@@ -906,56 +735,11 @@ Get Estimate
               </p>
             </div>
           </div>
-          <div class="text-center">
-            <img src="./img/service-1.jpg" alt="" width="355" height="418px" />
-            <div class="p-4">
-              <h6 class="fw-bold">MODERN LUXURY</h6>
-              <p>
-                Style combines neutral colors, high-quality materials, modern
-                technologies & appliances, and minimalist design to create a
-                chic culinary space.
-              </p>
+    
+          <div class="text-center col-md-6 col-12 project-card">
+            <div class="img-container">
+              <img src="./img/tvwall-11.jpg" alt="" class="project-img" />
             </div>
-          </div>
-          <div class="text-center">
-            <img src="./img/service-1.jpg" alt="" width="355" height="418px" />
-            <div class="p-4">
-              <h6 class="fw-bold">MODERN LUXURY</h6>
-              <p>
-                Style combines neutral colors, high-quality materials, modern
-                technologies & appliances, and minimalist design to create a
-                chic culinary space.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="d-flex gap-5">
-          <div class="text-center">
-            <img src="./img/service-1.jpg" alt="" width="355" height="418px" />
-            <div class="p-4">
-              <h6 class="fw-bold">MODERN LUXURY</h6>
-              <p>
-                Style combines neutral colors, high-quality materials, modern
-                technologies & appliances, and minimalist design to create a
-                chic culinary space.
-              </p>
-            </div>
-          </div>
-          <div class="text-center">
-            <img src="./img/service-1.jpg" alt="" width="355" height="418px" />
-            <div class="p-4">
-              <h6 class="fw-bold">MODERN LUXURY</h6>
-              <p>
-                Style combines neutral colors, high-quality materials, modern
-                technologies & appliances, and minimalist design to create a
-                chic culinary space.
-              </p>
-            </div>
-          </div>
-          <div class="text-center">
-            <img src="./img/service-1.jpg" alt="" width="355" height="418px" />
             <div class="p-4">
               <h6 class="fw-bold">MODERN LUXURY</h6>
               <p>
@@ -968,171 +752,95 @@ Get Estimate
         </div>
       </div>
     </div>
-
-    <div class="container my-5">
-      <h1 class="text-center mb-4">KITCHEN PRICE CALCULATOR</h1>
-  
-      <form id="kitchenForm">
-          <!-- Section 1: Style -->
-          <div class="form-section">
-              <h3>Choose Style</h3>
-              <div class="d-flex gap-5 flex-wrap">
-                  <div class="text-center">
-                      <input type="radio" id="style1" name="kitchenStyle" value="Luxury" hidden>
-                      <label for="style1" class="selectable-item">
-                          <img src="./img/kitchen-1.jpg" alt="Luxury Kitchen" width="300" height="200">
-                          <p>Luxury Kitchen</p>
-                      </label>
-                  </div>
-                  <div class="text-center">
-                      <input type="radio" id="style2" name="kitchenStyle" value="Modern" hidden>
-                      <label for="style2" class="selectable-item">
-                          <img src="./img/kitchen-2.jpg" alt="Modern Kitchen" width="300" height="200">
-                          <p>Modern Kitchen</p>
-                      </label>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Section 2: Material -->
-          <div class="form-section d-none">
-              <h3>Choose Material</h3>
-              <div class="d-flex gap-5 flex-wrap">
-                  <div class="text-center">
-                      <input type="radio" id="material1" name="kitchenMaterial" value="Granite" hidden>
-                      <label for="material1" class="selectable-item">
-                          <img src="./img/service-1.jpg" alt="Granite" width="300" height="200">
-                          <p>Granite</p>
-                      </label>
-                  </div>
-                  <div class="text-center">
-                      <input type="radio" id="material2" name="kitchenMaterial" value="Marble" hidden>
-                      <label for="material2" class="selectable-item">
-                          <img src="./img/service-2.jpg" alt="Marble" width="300" height="200">
-                          <p>Marble</p>
-                      </label>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Section 3: Appliances -->
-          <div class="form-section d-none">
-              <h3>Choose Appliances</h3>
-              <div class="d-flex gap-5 flex-wrap">
-                  <div class="text-center">
-                      <input type="checkbox" id="appliance1" name="appliances" value="Oven" hidden>
-                      <label for="appliance1" class="selectable-item">
-                          <p>Oven</p>
-                      </label>
-                  </div>
-                  <div class="text-center">
-                      <input type="checkbox" id="appliance2" name="appliances" value="Refrigerator" hidden>
-                      <label for="appliance2" class="selectable-item">
-                          <p>Refrigerator</p>
-                      </label>
-                  </div>
-                  <div class="text-center">
-                      <input type="checkbox" id="appliance3" name="appliances" value="Dishwasher" hidden>
-                      <label for="appliance3" class="selectable-item">
-                          <p>Dishwasher</p>
-                      </label>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Navigation Buttons -->
-          <div class="mt-4 d-flex justify-content-between">
-              <button type="button" class="btn btn-secondary" id="prevButton" disabled>Previous</button>
-              <button type="button" class="btn btn-primary" id="nextButton">Next</button>
-          </div>
-      </form>
-  </div>
-    <!-- Project End -->
-        
-
-
-
     <div class="social-media-sticky">
-      <div class="d-flex justify-content-around social-media-icons"  >
+      <div class="d-flex justify-content-around social-media-icons">
         <div class="icon-block">
-          <a class="btn btn-square btn-outline-body" href="https://wa.me/+971569937768?text=Hi">
+          <a
+            class="btn btn-square btn-outline-body"
+            href="https://wa.me/+971569937768?text=Hi"
+          >
             <i class="fab fa-whatsapp"></i>
           </a>
         </div>
-        <div class="icon-block" >
-          <a class="btn btn-square btn-outline-body"  href="#">
+        <div class="icon-block">
+          <a class="btn btn-square btn-outline-body" href="#">
             <i class="fa fa-phone-alt"></i>
           </a>
         </div>
         <div class="icon-block">
-          <a class="btn btn-square btn-outline-body"  href="#">
+          <a class="btn btn-square btn-outline-body" href="#">
             <i class="fab fa-instagram"></i>
           </a>
         </div>
         <div class="icon-block">
-          <a class="btn btn-square btn-outline-body"  href="#">
+          <a class="btn btn-square btn-outline-body" href="#">
             <i class="fa fa-envelope"></i>
           </a>
         </div>
       </div>
     </div>
-    
-
-
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer  px-0 wow fadeIn" data-wow-delay="0.1s">
-
-
+    <div
+      class="container-fluid bg-dark text-body footer px-0 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
       <div class="container py-3">
         <div class="row g-3">
-          
-    
           <div class="d-flex justify-content-between copyright">
-  
             <div class="col-lg-3 col-md-6">
               <h3 class="text-light mb-4">Services</h3>
-            <a class="btn btn-link" href="./kitchens.html">Kitchens</a>
-            <a class="btn btn-link" href="./closets.html">Closets</a>
-            <a class="btn btn-link" href="./entertainment.html">Entertainment </a>
-            <a class="btn btn-link" href="./wallcladding.html">Wall Cladding</a>
-            <a class="btn btn-link" href="./Maintenance.html">Maintenance</a>
-            <a class="btn btn-link" href="./InteriorDesign.html">Interior</a>
+              <a class="btn btn-link" href="./kitchens.html">Kitchens</a>
+              <a class="btn btn-link" href="./closets.html">Closets</a>
+              <a class="btn btn-link" href="./entertainment.html"
+                >Entertainment
+              </a>
+              <a class="btn btn-link" href="./wallcladding.html"
+                >Wall Cladding</a
+              >
+              <a class="btn btn-link" href="./Maintenance.html">Maintenance</a>
+              <a class="btn btn-link" href="./InteriorDesign.html">Interior</a>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <h3 class="text-light mb-4">Quick Links</h3>
+              <a class="btn btn-link" href="./about.html">About Us</a>
+              <a class="btn btn-link" href="./contact.html">Contact </a>
+              <a class="btn btn-link" href="./service.html">Services</a>
+              <a class="btn btn-link" href="./contact.html">Support</a>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <a href="./index.html" class="ms-4 ms-lg-0">
+                <img
+                  class="me-3"
+                  src="./img/fullLogo.png"
+                  alt="Icon"
+                  height="120px"
+                  width="300px"
+                />
+              </a>
+            </div>
           </div>
-          
-          <div class="col-lg-3 col-md-6">
-            <h3 class="text-light mb-4">Quick Links</h3>
-            <a class="btn btn-link" href="./about.html">About Us</a>
-            <a class="btn btn-link" href="./contact.html">Contact </a>
-            <a class="btn btn-link" href="./service.html">Services</a>
-            <a class="btn btn-link" href="./contact.html">Support</a>
+
+          <div class="col-lg-12 col-md-12 text-center">
+            <h3 class="text-light mb-2">Address</h3>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt text-primary me-3"></i>
+              Showroom 220, Al Asmawi Building, Umm Al Sheif,Sheikh Zayed Road,
+              Dubai
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt text-primary me-3"></i>+0569937768
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope text-primary me-3"></i
+              >marsinteriors@gmail.com
+            </p>
           </div>
-    
-          <div class="col-lg-3 col-md-6">
-            <a href="./index.html" class="ms-4 ms-lg-0">
-              <img class="me-3" src="./img/fullLogo.png" alt="Icon" height="120px" width="300px" />
-            </a>
-          </div>
-        </div>
-  
-        <div class="col-lg-12 col-md-12 text-center">
-          <h3 class="text-light mb-2">Address</h3>
-          <p class="mb-2">
-            <i class="fa fa-map-marker-alt text-primary me-3"></i>
-            Showroom 220, Al Asmawi Building, Umm Al Sheif,Sheikh Zayed Road, Dubai
-          </p>
-          <p class="mb-2">
-            <i class="fa fa-phone-alt text-primary me-3"></i>+0569937768
-          </p>
-          <p class="mb-2">
-            <i class="fa fa-envelope text-primary me-3"></i>marsinteriors@gmail.com
-          </p>
-        </div>
-          
-          
         </div>
       </div>
-      
+
       <div class="container-fluid copyright">
         <div class="container">
           <div class="row">
@@ -1148,17 +856,10 @@ Get Estimate
     </div>
     <!-- Footer End -->
 
-       
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
       ><i class="bi bi-arrow-up"></i
     ></a>
-
-   
-
-
-    
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -1177,33 +878,87 @@ Get Estimate
     <script src="./js/excel.js"></script>
     <script src="./js/whatsapp.js"></script>
 
-<!-- JavaScript -->
-<script>
-  function sendWhatsAppMessage() {
-    // Get input values
-    const name = document.getElementById('userName').value;
-    const email = document.getElementById('userEmail').value;
-    const mobile = document.getElementById('userMobile').value;
-    const service = document.getElementById('userService').value;
-    const message = document.getElementById('userMessage').value;
+    <!-- JavaScript -->
+    <script>
+      function sendWhatsAppMessage() {
+        // Get input values
+        const name = document.getElementById("userName").value;
+        const email = document.getElementById("userEmail").value;
+        const mobile = document.getElementById("userMobile").value;
+        const service = document.getElementById("userService").value;
+        const message = document.getElementById("userMessage").value;
 
-    // Construct WhatsApp message
-    const whatsappMessage = `Hi, I would like to book an appointment.
+        // Construct WhatsApp message
+        const whatsappMessage = `Hi, I would like to book an appointment.
     Name: ${name}
     Email: ${email}
     Mobile: ${mobile}
     Service: ${service}
     Message: ${message}`;
 
-    // Replace spaces with '+' and encode other special characters
-    const formattedMessage = whatsappMessage.replace(/\s+/g, '+');
+        // Replace spaces with '+' and encode other special characters
+        const formattedMessage = whatsappMessage.replace(/\s+/g, "+");
 
-    // Create WhatsApp URL with the formatted message
-    const whatsappURL = `https://wa.me/+971569937768?text=${formattedMessage}`;
+        // Create WhatsApp URL with the formatted message
+        const whatsappURL = `https://wa.me/+971569937768?text=${formattedMessage}`;
 
-    // Open WhatsApp with the message
-    window.open(whatsappURL, '_blank');
-  }
-</script>
+        // Open WhatsApp with the message
+        window.open(whatsappURL, "_blank");
+      }
+    </script>
+
+    <script>
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(
+          () => {
+            console.log("Phone Number Copied!");
+          },
+          (err) => {
+            console.error("Failed to copy: ", err);
+          }
+        );
+      }
+    </script>
+    <script>
+      const sections = document.querySelectorAll(".form-section");
+      let currentSectionIndex = 0;
+
+      const nextButton = document.getElementById("nextButton");
+      const prevButton = document.getElementById("prevButton");
+
+      // Function to show the current section based on index
+      function showSection(index) {
+        sections.forEach((section, i) => {
+          section.classList.toggle("d-none", i !== index);
+        });
+
+        // Update button states
+        prevButton.disabled = index === 0;
+        nextButton.textContent =
+          index === sections.length - 1 ? "Submit" : "Next";
+      }
+
+      // Next button event
+      nextButton.addEventListener("click", () => {
+        if (currentSectionIndex < sections.length - 1) {
+          currentSectionIndex++;
+          showSection(currentSectionIndex);
+        } else {
+          // Submit the form on the final step
+          alert("Form submitted!");
+        }
+      });
+
+      // Previous button event
+      prevButton.addEventListener("click", () => {
+        if (currentSectionIndex > 0) {
+          currentSectionIndex--;
+          showSection(currentSectionIndex);
+        }
+      });
+
+      // Initialize the first section
+      showSection(currentSectionIndex);
+    </script>
   </body>
 </html>

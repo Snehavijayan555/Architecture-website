@@ -728,155 +728,43 @@
     </div>
     
 
-    <div class="container my-5">
-      <h1 class="text-center mb-4">Quote for Kids Room</h1>
+  <!-- Quote -->
+  <div style="display: flex; max-width: 1200px; width: 100%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden;">
+        
+    <!-- Image Section -->
+    <div style="flex: 1;">
+      <img src="./img/kidsroom-12.jpg" alt="TV Wall Design" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+  </div>
+  
 
-      <form id="kitchenForm">
-        <!-- Section 1: Style -->
-        <div class="form-section">
-          <h3>Choose Style</h3>
-          <div class="d-flex gap-5 flex-wrap">
-            <div class="text-center">
-              <input
-                type="radio"
-                id="style1"
-                name="kitchenStyle"
-                value="Luxury"
-                hidden
-              />
-              <label for="style1" class="selectable-item">
-                <img
-                  src="./img/kidsRoom2.jpg"
-                  alt="Luxury Kitchen"
-                  width="300"
-                  height="200"
-                />
-                <p>Luxury Kitchen</p>
-              </label>
-            </div>
-            <div class="text-center">
-              <input
-                type="radio"
-                id="style2"
-                name="kitchenStyle"
-                value="Modern"
-                hidden
-              />
-              <label for="style2" class="selectable-item">
-                <img
-                  src="./img/kidsRoom3.jpg"
-                  alt="Modern Kitchen"
-                  width="300"
-                  height="200"
-                />
-                <p>Modern Kitchen</p>
-              </label>
-            </div>
-          </div>
+    <!-- Form Section -->
+    <div style="flex: 1; padding: 40px; background-color: #f7f7f7;">
+        <h3 style="color: #c8c4c4; letter-spacing: 1px; font-size: 14px; font-weight: bold; margin-bottom: 10px;">ESTIMATE</h3>
+        <h1 style="font-size: 32px; color: #333; font-weight: bold; margin-bottom: 20px; line-height: 1.2;">I NEED A QUOTE FOR MY TV WALL 3D DESIGN</h1>
+        <p style="font-size: 16px; color: #555; line-height: 1.5; margin-bottom: 30px;">
+          If you already have your children’s room 3d design or found a picture of your dream children’s room furniture from the internet, attach the image here to get a quote for it.
+        </p>
+
+        <!-- Form Fields -->
+        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+            <input type="text" placeholder="Name*" style="flex: 1; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="text" placeholder="Phone number*" style="flex: 1; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        <span style="font-size: 10px; color: #c8c4c4; display: block; margin-bottom: 15px;">MANDATORY FIELD</span>
+        
+        <textarea placeholder="Message details" style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; height: 80px; margin-bottom: 15px; resize: none;"></textarea>
+        
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+            <input type="file" id="file-input" style="font-size: 14px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; flex: 1;">
+            <span id="file-name" style="font-size: 14px; color: #666;">No file chosen</span>
         </div>
 
-        <!-- Section 2: Material -->
-        <div class="form-section d-none">
-          <h3>Choose Material</h3>
-          <div class="d-flex gap-5 flex-wrap">
-            <div class="text-center">
-              <input
-                type="radio"
-                id="material1"
-                name="kitchenMaterial"
-                value="Granite"
-                hidden
-              />
-              <label for="material1" class="selectable-item">
-                <img
-                  src="./img/service-1.jpg"
-                  alt="Granite"
-                  width="300"
-                  height="200"
-                />
-                <p>Granite</p>
-              </label>
-            </div>
-            <div class="text-center">
-              <input
-                type="radio"
-                id="material2"
-                name="kitchenMaterial"
-                value="Marble"
-                hidden
-              />
-              <label for="material2" class="selectable-item">
-                <img
-                  src="./img/service-2.jpg"
-                  alt="Marble"
-                  width="300"
-                  height="200"
-                />
-                <p>Marble</p>
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <!-- Section 3: Appliances -->
-        <div class="form-section d-none">
-          <h3>Choose Appliances</h3>
-          <div class="d-flex gap-5 flex-wrap">
-            <div class="text-center">
-              <input
-                type="checkbox"
-                id="appliance1"
-                name="appliances"
-                value="Oven"
-                hidden
-              />
-              <label for="appliance1" class="selectable-item">
-                <p>Oven</p>
-              </label>
-            </div>
-            <div class="text-center">
-              <input
-                type="checkbox"
-                id="appliance2"
-                name="appliances"
-                value="Refrigerator"
-                hidden
-              />
-              <label for="appliance2" class="selectable-item">
-                <p>Refrigerator</p>
-              </label>
-            </div>
-            <div class="text-center">
-              <input
-                type="checkbox"
-                id="appliance3"
-                name="appliances"
-                value="Dishwasher"
-                hidden
-              />
-              <label for="appliance3" class="selectable-item">
-                <p>Dishwasher</p>
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <div class="mt-4 d-flex justify-content-between">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            id="prevButton"
-            disabled
-          >
-            Previous
-          </button>
-          <button type="button" class="btn btn-primary" id="nextButton">
-            Next
-          </button>
-        </div>
-      </form>
+        <button style="width: 100%; padding: 12px; font-size: 16px; font-weight: bold; color: #fff; background-color: #b8ada7; border: none; border-radius: 4px; cursor: pointer;">
+            GET ESTIMATE
+        </button>
     </div>
+</div>
+
 
     <div class="social-media-sticky">
       <div class="d-flex justify-content-around social-media-icons">
@@ -1088,5 +976,14 @@
       // Initialize the first section
       showSection(currentSectionIndex);
     </script>
+     <script>
+      // JavaScript to update file name text on file selection
+      const fileInput = document.getElementById('file-input');
+      const fileNameDisplay = document.getElementById('file-name');
+
+      fileInput.addEventListener('change', function() {
+          fileNameDisplay.textContent = fileInput.files.length > 0 ? fileInput.files[0].name : "No file chosen";
+      });
+  </script>
   </body>
 </html>

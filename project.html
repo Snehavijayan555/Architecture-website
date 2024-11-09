@@ -129,62 +129,7 @@
       </button>
  
  <!-- Modal Structure -->
- <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-   <div class="modal-dialog">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title" id="contactModalLabel">Get Estimate</h5>
-         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-       </div>
-       <div class="modal-body">
-         <form>
-           <!-- Name Input -->
-           <div class="mb-3">
-             <label for="nameInput" class="form-label">Name</label>
-             <input type="text" class="form-control" id="nameInput" placeholder="Enter your name" required>
-           </div>
- 
-           <!-- Phone Number Input -->
-           <div class="mb-3">
-             <label for="phoneInput" class="form-label">Phone Number</label>
-             <input type="tel" class="form-control" id="phoneInput" placeholder="Enter your phone number" required>
-           </div>
- 
-           <!-- Services Dropdown -->
-           <div class="mb-3">
-            <label for="servicesDropdown" class="form-label">Select Service</label>
-            <select class="form-select" id="servicesDropdown" required>
-              <option value="" disabled selected>Select a service</option>
-              <option value="service1">Kitchen</option>
-               <option value="service2">Closets</option>
-               <option value="service3">TV Wall</option>
-               <option value="service3">Kids Room</option>
-               <option value="service3">Vanities</option>
-               <option value="service3">Furniture</option>
-               <option value="service3">Other</option>
-               </select>
-          </div>
- 
-           <!-- Message Input -->
-           <div class="mb-3">
-             <label for="messageTextarea" class="form-label">Message Details</label>
-             <textarea class="form-control" id="messageTextarea" rows="3" placeholder="Enter your message"></textarea>
-           </div>
- 
-           <!-- File Upload -->
-           <div class="mb-3">
-             <label for="fileUpload" class="form-label">Upload File</label>
-             <input class="form-control" type="file" id="fileUpload">
-           </div>
-         </form>
-       </div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-         <button type="submit" class="btn btn-primary">Submit</button>
-       </div>
-     </div>
-   </div>
- </div>
+
  
       </div>
     </nav>
@@ -197,7 +142,7 @@
             <h1 class="display-1 text-white animated slideInDown">Portfolio</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
                     <li class="breadcrumb-item text-primary active" aria-current="page">Portfolio</li>
                 </ol>
             </nav>
@@ -206,113 +151,86 @@
     <!-- Page Header End -->
 
 
-    <!-- Project Start -->
+    <!-- intro  -->
     <div class="container-xxl project py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h4 class="section-title">Our Portfolio</h4>
-                <h1 class="display-5 mb-4">Visit Our Latest Projects And Our Innovative Works</h1>
+                <h2 class="mb-4">We offer more than simply high-quality services.</h2>
+                <p>Introducing Kabinets.ae the new era of bespoke furniture experience.</p>
+                  <p>Our team of experts is dedicated to design and build customized kitchens, wardrobes and other cabinetry spaces that reflect your unique style and meet your every need. From functional layouts to exquisite materials, Kabinets.ae pushes the boundaries of design to craft home pieces that inspire.</p>
+                 <p> With a seamless blend of artistry and functionality, we elevate the heart of your home to unparalleled levels.</p>
+                 <button
+                 type="button"
+                 class="btn btn-primary"
+                 onclick="copyToClipboard('+0569937768')"
+                 data-toggle="tooltip" data-placement="center" title="Click To Copy !"
+               >
+                 Contact Us
+               </button>
             </div>
-            <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="col-lg-4">
-                    <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
-                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
-                            <h3 class="m-0">01. Modern Complex</h3>
-                        </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
-                            <h3 class="m-0">02. Royal Hotel</h3>
-                        </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
-                            <h3 class="m-0">03. Mexwel Buiding</h3>
-                        </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
-                            <h3 class="m-0">04. Shopping Complex</h3>
-                        </button>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="tab-content w-100">
-                        <div class="tab-pane fade show active" id="tab-pane-1">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="./img/project-1.jpg"
-                                            style="object-fit: cover;" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h1 class="mb-3">25 Years Of Experience In Architecture Industry</h1>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-pane-2">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="./img/project-2.jpg"
-                                            style="object-fit: cover;" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h1 class="mb-3">25 Years Of Experience In Architecture Industry</h1>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-pane-3">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="./img/project-3.jpg"
-                                            style="object-fit: cover;" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h1 class="mb-3">25 Years Of Experience In Architecture Industry</h1>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-pane-4">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="./img/project-4.jpg"
-                                            style="object-fit: cover;" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h1 class="mb-3">25 Years Of Experience In Architecture Industry</h1>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+             </div>
     </div>
-    <!-- Project End -->
+    <!-- intro -->
+    
         
 
+<!-- projects -->
+   <div style="margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;">
 
+    <!-- Main Container -->
+    <div style="max-width: 1300px; margin: 0 auto; padding: 20px; background-color: #f9f9f9;">
+
+        <div style="display: flex; gap: 20px; justify-content: center;">
+
+            <!-- Image Section 1 -->
+            <div style="flex: 1; text-align: center;">
+                <h2 style="font-size: 18px; color: #888; text-transform: uppercase; margin-bottom: 10px;">
+                    Kitchen in Yas Island, 3BR Villa, Abu Dhabi, UAE
+                </h2>
+                <div style="position: relative; display: inline-block; max-width: 500px;">
+                    <span onclick="prevImage('kitchen')" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10094;</span>
+                    <img id="kitchen-main" src="./img/kitchen-2.jpg" alt="Kitchen" style="width: 100%; border-radius: 8px;">
+                    <span onclick="nextImage('kitchen')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10095;</span>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+                    <!-- Kitchen Thumbnails -->
+                    <img src="./img/kitchen-2.jpg" alt="Kitchen 1" onclick="changeImage('kitchen', 0)" style="height: 60px; cursor: pointer; border-radius: 4px;">
+                    <img src="./img/kitchen-3.jpg" alt="Kitchen 2" onclick="changeImage('kitchen', 1)" style="height: 60px; cursor: pointer; border-radius: 4px;">
+                    <img src="./img/kitchen-4.jpg" alt="Kitchen 3" onclick="changeImage('kitchen', 2)" style="height: 60px; cursor: pointer; border-radius: 4px;">
+                </div>
+            </div>
+    
+            <!-- Image Section 2 -->
+            <div style="flex: 1; text-align: center;">
+                <h2 style="font-size: 18px; color: #888; text-transform: uppercase; margin-bottom: 10px;">
+                    Dining Room in Yas Island, 3BR Villa, Abu Dhabi, UAE
+                </h2>
+                <div style="position: relative; display: inline-block; max-width: 500px;">
+                    <span onclick="prevImage('dining')" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10094;</span>
+                    <img id="dining-main" src="./img/closet-2.jpg" alt="Dining Room" style="width: 100%; border-radius: 8px;">
+                    <span onclick="nextImage('dining')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10095;</span>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+                    <!-- Dining Room Thumbnails -->
+                    <img src="./img/closet-2.jpg" alt="Dining Room 1" onclick="changeImage('dining', 0)" style="height: 60px; cursor: pointer; border-radius: 4px;">
+                    <img src="./img/closet-3.jpg" alt="Dining Room 2" onclick="changeImage('dining', 1)" style="height: 60px; cursor: pointer; border-radius: 4px;">
+                    <img src="./img/closet-4.jpg" alt="Dining Room 3" onclick="changeImage('dining', 2)" style="height: 60px; cursor: pointer; border-radius: 4px;">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+   
+
+    
+
+
+
+<!-- social media -->
     <div class="social-media-sticky">
       <div class="d-flex justify-content-around social-media-icons"  >
         <div class="icon-block">
@@ -474,5 +392,39 @@
     window.open(whatsappURL, '_blank');
   }
 </script>
+
+
+
+<script>
+  // Arrays to store image paths
+  const images = {
+      kitchen: ["./img/kitchen-2.jpg", "./img/kitchen-3.jpg", "./img/kitchen-4.jpg"],
+      dining: ["./img/closet-2.jpg", "./img/closet-3.jpg", "./img/closet-4.jpg"]
+  };
+
+  // Track current image index for each section
+  let currentIndex = { kitchen: 0, dining: 0 };
+
+  // Function to change image
+  function changeImage(section, index) {
+      document.getElementById(`${section}-main`).src = images[section][index];
+      currentIndex[section] = index;
+  }
+
+  // Function to go to the next image
+  function nextImage(section) {
+      currentIndex[section] = (currentIndex[section] + 1) % images[section].length;
+      document.getElementById(`${section}-main`).src = images[section][currentIndex[section]];
+  }
+
+  // Function to go to the previous image
+  function prevImage(section) {
+      currentIndex[section] = (currentIndex[section] - 1 + images[section].length) % images[section].length;
+      document.getElementById(`${section}-main`).src = images[section][currentIndex[section]];
+  }
+</script>
+
+
+
   </body>
 </html>

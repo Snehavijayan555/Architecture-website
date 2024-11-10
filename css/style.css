@@ -683,3 +683,42 @@ h6,
     }
   }
   
+
+
+
+
+   /* Set fixed dimensions and alignments for the main images */
+   .main-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Styling for thumbnails */
+.thumbnail {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  div[style*="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;"] {
+      flex-direction: column;
+      align-items: center;
+  }
+  div[style*="flex: 1 1 45%;"] {
+      width: 100%;
+      max-width: 100%;
+  }
+  .thumbnail {
+      height: 40px;
+      width: 40px;
+  }
+  .main-image {
+      height: 250px;
+  }
+}

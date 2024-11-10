@@ -176,52 +176,219 @@
         
 
 <!-- projects -->
-   <div style="margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;">
+<div style="margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;">
+  <!-- Main Container -->
+  <div style="max-width: 1300px; margin: 0 auto; padding: 20px; background-color: #f9f9f9;">
 
-    <!-- Main Container -->
-    <div style="max-width: 1300px; margin: 0 auto; padding: 20px; background-color: #f9f9f9;">
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
 
-        <div style="display: flex; gap: 20px; justify-content: center;">
+          <!-- Image Section 1 -->
+          <div style="flex: 1 1 45%; text-align: center; max-width: 100%; box-sizing: border-box;">
+              <h2 style="font-size: 18px; color: black; text-transform: uppercase; margin-bottom: 10px;">
+                  Dubai Hills Estate, Private Town House, Dubai
+              </h2>
+              <div style="position: relative; display: inline-block; max-width: 100%; width: 100%;">
+                  <span onclick="prevImage('dubai')" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10094;</span>
+                  <img id="dubai-main" src="./img/Dubai Hills/IMG-20241109-WA0002.jpg" alt="dubai" style="width: 100%; border-radius: 8px;">
+                  <span onclick="nextImage('dubai')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10095;</span>
+              </div>
+              <div style="display: flex; justify-content: center; gap: 5px; margin-top: 10px; flex-wrap: wrap;">
+                  <!-- Kitchen Thumbnails -->
+                  <img src="./img/Dubai Hills/IMG-20241109-WA0002.jpg" alt="dubai 1" onclick="changeImage('dubai', 0)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Dubai Hills/IMG-20241109-WA0003.jpg" alt="dubai 2" onclick="changeImage('dubai', 1)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Dubai Hills/IMG-20241109-WA0018.jpg" alt="dubai 3" onclick="changeImage('dubai', 2)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Dubai Hills/IMG-20241109-WA0005.jpg" alt="dubai 4" onclick="changeImage('dubai', 3)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Dubai Hills/IMG-20241109-WA0006.jpg" alt="dubai 5" onclick="changeImage('dubai', 4)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Dubai Hills/IMG-20241109-WA0022.jpg" alt="dubai 6" onclick="changeImage('dubai', 5)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Dubai Hills/IMG-20241109-WA0008.jpg" alt="dubai 7" onclick="changeImage('dubai', 6)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Dubai Hills/IMG-20241109-WA0009.jpg" alt="dubai 8" onclick="changeImage('dubai', 7)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Dubai Hills/IMG-20241109-WA0028.jpg" alt="dubai 9" onclick="changeImage('dubai', 8)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Dubai Hills/IMG-20241109-WA0033.jpg" alt="dubai 10" onclick="changeImage('dubai', 9)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
 
-            <!-- Image Section 1 -->
-            <div style="flex: 1; text-align: center;">
-                <h2 style="font-size: 18px; color: black; text-transform: uppercase; margin-bottom: 10px;">
-                    Kitchen in Yas Island, 3BR Villa, Abu Dhabi, UAE
-                </h2>
-                <div style="position: relative; display: inline-block; max-width: 500px;">
-                    <span onclick="prevImage('kitchen')" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10094;</span>
-                    <img id="kitchen-main" src="./img/kitchen-2.jpg" alt="Kitchen" style="width: 100%; border-radius: 8px;">
-                    <span onclick="nextImage('kitchen')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10095;</span>
-                </div>
-                <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
-                    <!-- Kitchen Thumbnails -->
-                    <img src="./img/kitchen-2.jpg" alt="Kitchen 1" onclick="changeImage('kitchen', 0)" style="height: 60px; cursor: pointer; border-radius: 4px;">
-                    <img src="./img/kitchen-3.jpg" alt="Kitchen 2" onclick="changeImage('kitchen', 1)" style="height: 60px; cursor: pointer; border-radius: 4px;">
-                    <img src="./img/kitchen-4.jpg" alt="Kitchen 3" onclick="changeImage('kitchen', 2)" style="height: 60px; cursor: pointer; border-radius: 4px;">
-                </div>
+                  <!-- Add more thumbnails similarly -->
+              </div>
+          </div>
+
+          <!-- Image Section 2 -->
+          <div style="flex: 1 1 45%; text-align: center; max-width: 100%; box-sizing: border-box;">
+              <h2 style="font-size: 18px; color: black; text-transform: uppercase; margin-bottom: 10px;">
+                  The Sundials, Jumeirah Golf Estate, Private Villa, Dubai
+              </h2>
+              <div style="position: relative; display: inline-block; max-width: 100%; width: 100%;">
+                  <span onclick="prevImage('sundials')" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10094;</span>
+                  <img id="sundials-main" src="./img/The Sundials/IMG-20241109-WA0134.jpg" alt="Dining Room" style="width: 100%; border-radius: 8px;">
+                  <span onclick="nextImage('sundials')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10095;</span>
+              </div>
+              <div style="display: flex; justify-content: center; gap: 5px; margin-top: 10px; flex-wrap: wrap;">
+                  <!-- Dining Room Thumbnails -->
+                  <img src="./img/The Sundials/IMG-20241109-WA0134.jpg" alt="sundials Room 1" onclick="changeImage('sundials', 0)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/The Sundials/IMG-20241109-WA0135.jpg" alt="sundials Room 2" onclick="changeImage('sundials', 1)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/The Sundials/IMG-20241109-WA0136.jpg" alt="sundials Room 3" onclick="changeImage('sundials', 2)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/The Sundials/IMG-20241109-WA0137.jpg" alt="sundials Room 4" onclick="changeImage('sundials', 3)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/The Sundials/IMG-20241109-WA0138.jpg" alt="sundials Room 5" onclick="changeImage('sundials', 4)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/The Sundials/IMG-20241109-WA0139.jpg" alt="sundials Room 6" onclick="changeImage('sundials', 5)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/The Sundials/IMG-20241109-WA0140.jpg" alt="sundials Room 7" onclick="changeImage('sundials', 6)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/The Sundials/IMG-20241109-WA0141.jpg" alt="sundials Room 8" onclick="changeImage('sundials', 7)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/The Sundials/IMG-20241109-WA0142.jpg" alt="sundials Room 9" onclick="changeImage('sundials', 8)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/The Sundials/IMG-20241109-WA0143.jpg" alt="sundials Room 10" onclick="changeImage('sundials', 9)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+
+
+              </div>
+          </div>
+
+      </div>
+
+
+      <!-- Line between images -->
+      <hr style="width: 100%; border: none; border-top: 1px solid #cccccc6b; margin: 20px 0;">
+      <!-- Line between images -->
+
+
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+
+        <!-- Image Section 1 -->
+        <div style="flex: 1 1 45%; text-align: center; max-width: 100%; box-sizing: border-box;">
+            <h2 style="font-size: 18px; color: black; text-transform: uppercase; margin-bottom: 10px;">
+              Madina Tower Apartment, Cluster O, JLT, Dubai
+            </h2>
+            <div style="position: relative; display: inline-block; max-width: 100%; width: 100%;">
+                <span onclick="prevImage('madina')" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10094;</span>
+                <img id="madina-main" src="./img/Madina Tower/IMG-20241109-WA0043.jpg" alt="madina" style="width: 100%; border-radius: 8px;">
+                <span onclick="nextImage('madina')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10095;</span>
             </div>
-    
-            <!-- Image Section 2 -->
-            <div style="flex: 1; text-align: center;">
-                <h2 style="font-size: 18px; color: black; text-transform: uppercase; margin-bottom: 10px;">
-                    Dining Room in Yas Island, 3BR Villa, Abu Dhabi, UAE
-                </h2>
-                <div style="position: relative; display: inline-block; max-width: 500px;">
-                    <span onclick="prevImage('dining')" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10094;</span>
-                    <img id="dining-main" src="./img/closet-2.jpg" alt="Dining Room" style="width: 100%; border-radius: 8px;">
-                    <span onclick="nextImage('dining')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10095;</span>
-                </div>
-                <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
-                    <!-- Dining Room Thumbnails -->
-                    <img src="./img/closet-2.jpg" alt="Dining Room 1" onclick="changeImage('dining', 0)" style="height: 60px; cursor: pointer; border-radius: 4px;">
-                    <img src="./img/closet-3.jpg" alt="Dining Room 2" onclick="changeImage('dining', 1)" style="height: 60px; cursor: pointer; border-radius: 4px;">
-                    <img src="./img/closet-4.jpg" alt="Dining Room 3" onclick="changeImage('dining', 2)" style="height: 60px; cursor: pointer; border-radius: 4px;">
-                </div>
-            </div>
+            <div style="display: flex; justify-content: center; gap: 5px; margin-top: 10px; flex-wrap: wrap;">
+                <!-- madina Thumbnails -->
+                <img src="./img/Madina Tower/IMG-20241109-WA0043.jpg" alt="madina 1" onclick="changeImage('madina', 0)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                <img src="./img/Madina Tower/IMG-20241109-WA0046.jpg" alt="madina 4" onclick="changeImage('madina', 3)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                <img src="./img/Madina Tower/IMG-20241109-WA0047.jpg" alt="madina 5" onclick="changeImage('madina', 4)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                <img src="./img/Madina Tower/IMG-20241109-WA0048.jpg" alt="madina 6" onclick="changeImage('madina', 5)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                <img src="./img/Madina Tower/IMG-20241109-WA0049.jpg" alt="madina 7" onclick="changeImage('madina', 6)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                <img src="./img/Madina Tower/IMG-20241109-WA0050.jpg" alt="madina 8" onclick="changeImage('madina', 7)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                <img src="./img/Madina Tower/IMG-20241109-WA0051.jpg" alt="madina 9" onclick="changeImage('madina', 8)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                <img src="./img/Madina Tower/IMG-20241109-WA0052.jpg" alt="madina 10" onclick="changeImage('madina', 9)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
 
+                <!-- Add more thumbnails similarly -->
+            </div>
+        </div>
+
+        <!-- Image Section 2 -->
+        <div style="flex: 1 1 45%; text-align: center; max-width: 100%; box-sizing: border-box;">
+            <h2 style="font-size: 18px; color: black; text-transform: uppercase; margin-bottom: 10px;">
+              Golf Towers Apartment, The Greens, Dubai
+            </h2>
+            <div style="position: relative; display: inline-block; max-width: 100%; width: 100%;">
+                <span onclick="prevImage('golf')" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10094;</span>
+                <img id="golf-main" src="./img/Golf Towers/IMG-20241109-WA0037.jpg" alt="golf" style="width: 100%; border-radius: 8px;">
+                <span onclick="nextImage('golf')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10095;</span>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 5px; margin-top: 10px; flex-wrap: wrap;">
+                <!-- golf Room Thumbnails -->
+                <img src="./img/Golf Towers/IMG-20241109-WA0037.jpg" alt="golf Room 1" onclick="changeImage('golf', 0)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                <img src="./img/Golf Towers/IMG-20241109-WA0038.jpg" alt="golf Room 2" onclick="changeImage('golf', 1)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                <img src="./img/Golf Towers/IMG-20241109-WA0039.jpg" alt="golf Room 3" onclick="changeImage('golf', 2)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                <img src="./img/Golf Towers/IMG-20241109-WA0040.jpg" alt="golf Room 4" onclick="changeImage('golf', 3)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                <img src="./img/Golf Towers/IMG-20241109-WA0041.jpg" alt="golf Room 5" onclick="changeImage('golf', 4)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                <img src="./img/Golf Towers/IMG-20241109-WA0042.jpg" alt="golf Room 6" onclick="changeImage('golf', 5)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                </div>
         </div>
     </div>
-    </div>
+
+
+<!-- Line between images -->
+    <hr style="width: 100%; border: none; border-top: 1px solid #cccccc6b; margin: 20px 0;">
+    <!-- Line between images -->
+
+
+
+    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+
+      <!-- Image Section 1 -->
+      <div style="flex: 1 1 45%; text-align: center; max-width: 100%; box-sizing: border-box;">
+          <h2 style="font-size: 18px; color: black; text-transform: uppercase; margin-bottom: 10px;">
+            Indigo Tower Apartment, Cluster D, JLT, Dubai
+          </h2>
+          <div style="position: relative; display: inline-block; max-width: 100%; width: 100%;">
+              <span onclick="prevImage('indigo')" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10094;</span>
+              <img id="indigo-main" src="./img/Indigo Tower/IMG-20241109-WA0054.jpg" alt="indigo" style="width: 100%; border-radius: 8px;">
+              <span onclick="nextImage('indigo')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10095;</span>
+          </div>
+          <div style="display: flex; justify-content: center; gap: 5px; margin-top: 10px; flex-wrap: wrap;">
+              <!-- madina Thumbnails -->
+              <img src="./img/Indigo Tower/IMG-20241109-WA0054.jpg" alt="indigo 1" onclick="changeImage('indigo', 0)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Indigo Tower/IMG-20241109-WA0056.jpg" alt="indigo 3" onclick="changeImage('indigo', 2)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Indigo Tower/IMG-20241109-WA0057.jpg" alt="indigo 4" onclick="changeImage('indigo', 3)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Indigo Tower/IMG-20241109-WA0058.jpg" alt="indigo 5" onclick="changeImage('indigo', 4)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Indigo Tower/IMG-20241109-WA0059.jpg" alt="indigo 6" onclick="changeImage('indigo', 5)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Indigo Tower/IMG-20241109-WA0060.jpg" alt="indigo 7" onclick="changeImage('indigo', 6)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Indigo Tower/IMG-20241109-WA0061.jpg" alt="indigo 8" onclick="changeImage('indigo', 7)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+          </div>
+      </div>
+
+      <!-- Image Section 2 -->
+      <div style="flex: 1 1 45%; text-align: center; max-width: 100%; box-sizing: border-box;">
+          <h2 style="font-size: 18px; color: black; text-transform: uppercase; margin-bottom: 10px;">
+            Flame Tree Ridge, Private Villa, Jumeirah Golf Estates, Dubai
+          </h2>
+          <div style="position: relative; display: inline-block; max-width: 100%; width: 100%;">
+              <span onclick="prevImage('flame')" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10094;</span>
+              <img id="flame-main" src="./img/Flame Tree/IMG-20241109-WA0064.jpg" alt="flame" style="width: 100%; border-radius: 8px;">
+              <span onclick="nextImage('flame')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10095;</span>
+          </div>
+          <div style="display: flex; justify-content: center; gap: 5px; margin-top: 10px; flex-wrap: wrap;">
+              <!-- golf Room Thumbnails -->
+              <img src="./img/Flame Tree/IMG-20241109-WA0064.jpg" alt="flame Room 1" onclick="changeImage('flame', 0)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Flame Tree/IMG-20241109-WA0065.jpg" alt="flame Room 2" onclick="changeImage('flame', 1)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Flame Tree/IMG-20241109-WA0066.jpg" alt="flame Room 3" onclick="changeImage('flame', 2)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Flame Tree/IMG-20241109-WA0067.jpg" alt="flame Room 4" onclick="changeImage('flame', 3)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Flame Tree/IMG-20241109-WA0068.jpg" alt="flame Room 5" onclick="changeImage('flame', 4)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Flame Tree/IMG-20241109-WA0069.jpg" alt="flame Room 6" onclick="changeImage('flame', 5)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Flame Tree/IMG-20241109-WA0070.jpg" alt="flame Room 7" onclick="changeImage('flame', 6)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Flame Tree/IMG-20241109-WA0071.jpg" alt="flame Room 8" onclick="changeImage('flame', 7)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Flame Tree/IMG-20241109-WA0072.jpg" alt="flame Room 9" onclick="changeImage('flame', 8)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              <img src="./img/Flame Tree/IMG-20241109-WA0073.jpg" alt="flame Room 10" onclick="changeImage('flame', 9)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+            </div>
+           
+              </div>
+            </div>
+           
+           
+    
+            <!-- Line between images -->
+            <hr style="width: 100%; border: none; border-top: 1px solid #cccccc6b; margin: 20px 0;">
+            <!-- Line between images -->
+            
+
+
+            <div style="flex: 1 1 45%; text-align: center;  max-width: 100%; box-sizing: border-box;">
+              <h2 style="font-size: 18px; color: black; text-transform: uppercase; margin-bottom: 10px;">
+                Jumeirah Parks Private Villa, Dubai
+              </h2>
+              <div style="position: relative; display: inline-block; max-width: 100%; width: 100%;">
+                  <span onclick="prevImage('jumeirah')" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10094;</span>
+                  <img id="jumeirah-main" src="./img/Jumeirah Parks/IMG-20241109-WA0077.jpg" alt="jumeirah" style="width: 100%; border-radius: 8px;">
+                  <span onclick="nextImage('jumeirah')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 24px; color: rgba(0, 0, 0, 0.5); cursor: pointer; z-index: 1;">&#10095;</span>
+              </div>
+              <div style="display: flex; justify-content: center; gap: 5px; margin-top: 10px; flex-wrap: wrap;">
+                  <!-- madina Thumbnails -->
+                  <img src="./img/Jumeirah Parks/IMG-20241109-WA0077.jpg" alt="jumeirah 1" onclick="changeImage('jumeirah', 0)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Jumeirah Parks/IMG-20241109-WA0078.jpg" alt="jumeirah 2" onclick="changeImage('jumeirah', 1)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Jumeirah Parks/IMG-20241109-WA0079.jpg" alt="jumeirah 3" onclick="changeImage('jumeirah', 2)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Jumeirah Parks/IMG-20241109-WA0080.jpg" alt="jumeirah 4" onclick="changeImage('jumeirah', 3)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Jumeirah Parks/IMG-20241109-WA0081.jpg" alt="jumeirah 5" onclick="changeImage('jumeirah', 4)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Jumeirah Parks/IMG-20241109-WA0082.jpg" alt="jumeirah 6" onclick="changeImage('jumeirah', 5)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Jumeirah Parks/IMG-20241109-WA0083.jpg" alt="jumeirah 7" onclick="changeImage('jumeirah', 6)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Jumeirah Parks/IMG-20241109-WA0084.jpg" alt="jumeirah 8" onclick="changeImage('jumeirah', 7)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Jumeirah Parks/IMG-20241109-WA0085.jpg" alt="jumeirah 8" onclick="changeImage('jumeirah', 7)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+                  <img src="./img/Jumeirah Parks/IMG-20241109-WA0086.jpg" alt="jumeirah 8" onclick="changeImage('jumeirah', 7)" style="height: 50px; width: 50px; cursor: pointer; border-radius: 4px; object-fit: cover;">
+              </div>
+
+
+
+
+  </div>
+</div>
+
+
 
 
    
@@ -396,35 +563,109 @@
 
 
 <script>
-  // Arrays to store image paths
-  const images = {
-      kitchen: ["./img/kitchen-2.jpg", "./img/kitchen-3.jpg", "./img/kitchen-4.jpg"],
-      dining: ["./img/closet-2.jpg", "./img/closet-3.jpg", "./img/closet-4.jpg"]
-  };
+const images = {
+  dubai: [
+        './img/Dubai Hills/IMG-20241109-WA0002.jpg',
+        './img/Dubai Hills/IMG-20241109-WA0003.jpg',
+        './img/Dubai Hills/IMG-20241109-WA0018.jpg',
+        './img/Dubai Hills/IMG-20241109-WA0005.jpg',
+        './img/Dubai Hills/IMG-20241109-WA0006.jpg',
+        './img/Dubai Hills/IMG-20241109-WA0022.jpg',
+        './img/Dubai Hills/IMG-20241109-WA0008.jpg',
+        './img/Dubai Hills/IMG-20241109-WA0009.jpg',
+        './img/Dubai Hills/IMG-20241109-WA0028.jpg',
+        './img/Dubai Hills/IMG-20241109-WA0033.jpg'
+    ],
+    sundials: [
+        './img/The Sundials/IMG-20241109-WA0134.jpg',
+        './img/The Sundials/IMG-20241109-WA0135.jpg',
+        './img/The Sundials/IMG-20241109-WA0136.jpg',
+        './img/The Sundials/IMG-20241109-WA0137.jpg',
+        './img/The Sundials/IMG-20241109-WA0138.jpg',
+        './img/The Sundials/IMG-20241109-WA0139.jpg',
+        './img/The Sundials/IMG-20241109-WA0140.jpg',
+        './img/The Sundials/IMG-20241109-WA0141.jpg',
+        './img/The Sundials/IMG-20241109-WA0142.jpg',
+        './img/The Sundials/IMG-20241109-WA0143.jpg'
+    ],
+    madina:[
+      './img/Madina Tower/IMG-20241109-WA0043.jpg',
+      './img/Madina Tower/IMG-20241109-WA0046.jpg',
+      './img/Madina Tower/IMG-20241109-WA0047.jpg',
+      './img/Madina Tower/IMG-20241109-WA0048.jpg',
+      './img/Madina Tower/IMG-20241109-WA0049.jpg',
+      './img/Madina Tower/IMG-20241109-WA0050.jpg',
+      './img/Madina Tower/IMG-20241109-WA0051.jpg',
+      './img/Madina Tower/IMG-20241109-WA0052.jpg',
+    ],
+    golf:[
+      './img/Golf Towers/IMG-20241109-WA0037.jpg',
+      './img/Golf Towers/IMG-20241109-WA0038.jpg',
+      './img/Golf Towers/IMG-20241109-WA0039.jpg',
+      './img/Golf Towers/IMG-20241109-WA0040.jpg',
+      './img/Golf Towers/IMG-20241109-WA0041.jpg',
+      './img/Golf Towers/IMG-20241109-WA0042.jpg',
+    ],
+    indigo:[
+      './img/Indigo Tower/IMG-20241109-WA0054.jpg',
+      './img/Indigo Tower/IMG-20241109-WA0056.jpg',
+      './img/Indigo Tower/IMG-20241109-WA0057.jpg',
+      './img/Indigo Tower/IMG-20241109-WA0058.jpg',
+      './img/Indigo Tower/IMG-20241109-WA0059.jpg',
+      './img/Indigo Tower/IMG-20241109-WA0060.jpg',
+      './img/Indigo Tower/IMG-20241109-WA0061.jpg',
+    ],
+    flame:[
+      './img/Flame Tree/IMG-20241109-WA0064.jpg',
+      './img/Flame Tree/IMG-20241109-WA0065.jpg',
+      './img/Flame Tree/IMG-20241109-WA0066.jpg',
+      './img/Flame Tree/IMG-20241109-WA0067.jpg',
+      './img/Flame Tree/IMG-20241109-WA0068.jpg',
+      './img/Flame Tree/IMG-20241109-WA0069.jpg',
+      './img/Flame Tree/IMG-20241109-WA0070.jpg',
+      './img/Flame Tree/IMG-20241109-WA0071.jpg',
+      './img/Flame Tree/IMG-20241109-WA0072.jpg',
+      './img/Flame Tree/IMG-20241109-WA0073.jpg',
+    ],
+    jumeirah:[
+      './img/Jumeirah Parks/IMG-20241109-WA0077.jpg',
+      './img/Jumeirah Parks/IMG-20241109-WA0078.jpg',
+      './img/Jumeirah Parks/IMG-20241109-WA0079.jpg',
+      './img/Jumeirah Parks/IMG-20241109-WA0080.jpg',
+      './img/Jumeirah Parks/IMG-20241109-WA0081.jpg',
+      './img/Jumeirah Parks/IMG-20241109-WA0082.jpg',
+      './img/Jumeirah Parks/IMG-20241109-WA0083.jpg',
+      './img/Jumeirah Parks/IMG-20241109-WA0084.jpg',
+      './img/Jumeirah Parks/IMG-20241109-WA0085.jpg',
+      './img/Jumeirah Parks/IMG-20241109-WA0086.jpg',
+    ]
 
-  // Track current image index for each section
-  let currentIndex = { kitchen: 0, dining: 0 };
+};
 
-  // Function to change image
-  function changeImage(section, index) {
-      document.getElementById(`${section}-main`).src = images[section][index];
-      currentIndex[section] = index;
-  }
+// Track current image index for each section
+let currentIndex = { dubai: 0, sundials: 0 ,madina: 0, golf: 0, indigo: 0, flame: 0, jumeirah: 0};
 
-  // Function to go to the next image
-  function nextImage(section) {
-      currentIndex[section] = (currentIndex[section] + 1) % images[section].length;
-      document.getElementById(`${section}-main`).src = images[section][currentIndex[section]];
-  }
+// Function to change image
+function changeImage(section, index) {
+    document.getElementById(`${section}-main`).src = images[section][index];
+    currentIndex[section] = index;
+}
 
-  // Function to go to the previous image
-  function prevImage(section) {
-      currentIndex[section] = (currentIndex[section] - 1 + images[section].length) % images[section].length;
-      document.getElementById(`${section}-main`).src = images[section][currentIndex[section]];
-  }
+// Function to go to the next image
+function nextImage(section) {
+    currentIndex[section] = (currentIndex[section] + 1) % images[section].length;
+    document.getElementById(`${section}-main`).src = images[section][currentIndex[section]];
+}
+
+// Function to go to the previous image
+function prevImage(section) {
+    currentIndex[section] = (currentIndex[section] - 1 + images[section].length) % images[section].length;
+    document.getElementById(`${section}-main`).src = images[section][currentIndex[section]];
+}
 </script>
-
 
 
   </body>
 </html>
+
+
